@@ -1,12 +1,49 @@
 <!DOCTYPE html>
 <html>
+<script>
+function calc(form) {
+
+var D = "0";
+var prev_close = document.getElementById("prev_close").value;
+var prev_change = document.getElementById("prev_change").value;
+var prev_trend = document.getElementById("prev_trend").value;
+var today_open = document.getElementById("today_open").value;
+var open_change = parseFloat(today_open) - parseFloat(prev_close);
+
+D = parseFloat(prev_close) + parseFloat(prev_change); 
+document.getElementById("result").innerHTML = D;
+if (((open_change < -7) && (prev_trend == "up")) ||
+               (open_change < -20)) { 
+   document.getElementById("action").innerHTML = "buy after 3mins";
+} else if(open_change > 25){
+   document.getElementById("action").innerHTML = "short after rising stop for 3 mins";
+} else {
+   document.getElementById("action").innerHTML = "wait for 30mins";
+}
+
+return false;
+}
+</script>
 <body>
 
-<h2>What Can JavaScript Do?</h2>
+Previous close: <input type="text" id="prev_close" name="num1" />
+Previous change: <input type="text" id="prev_change" name="op" />
+Previous trend: <input type="text" id="prev_trend" name="num2" />
+Today's open: <input type="text" id="today_open" name="num2" />
 
-<p id="demo">JavaScript can change HTML content.</p>
+<br />
+<input type="button" value="Solve" onClick="calc(this)">
 
-<button type="button" onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'>Click Me!</button>
+<p id="result" name="r1">
+<br />
+</p>
+
+<p id="action" name="r1">
+<br />
+</p>
+
 
 </body>
 </html>
+
+
