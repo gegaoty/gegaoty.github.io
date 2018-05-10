@@ -13,10 +13,11 @@ var o_3 = document.getElementById("o_3").value;
 
 D = parseFloat(prev_close) - parseFloat(prev_change); 
 document.getElementById("result").innerHTML = D;
-if (((open_change < -7) && (prev_trend == "up")) ||
-               (open_change < -20)) { 
+if (((open_change < -5) && (prev_trend == "up")) ||
+               (open_change < -30)) { 
    document.getElementById("action").innerHTML = "3分钟以后做多";
-} else if(open_change > 25){
+} else if(((open_change > 5) && (prev_trend == "down")) || 
+                         (open_change > 30)){
    document.getElementById("action").innerHTML = "高开走高停止3分钟后做空";
 } else {
    document.getElementById("action").innerHTML = "等开盘30分钟以后";
