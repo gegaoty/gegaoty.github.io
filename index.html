@@ -9,29 +9,66 @@ var prev_change = document.getElementById("prev_change").value;
 var prev_trend = document.getElementById("prev_trend").value;
 var today_open = document.getElementById("today_open").value;
 var open_change = parseFloat(today_open) - parseFloat(prev_close);
+var o_3 = document.getElementById("o_3").value;
 
-D = parseFloat(prev_close) + parseFloat(prev_change); 
+D = parseFloat(prev_close) - parseFloat(prev_change); 
 document.getElementById("result").innerHTML = D;
 if (((open_change < -7) && (prev_trend == "up")) ||
                (open_change < -20)) { 
-   document.getElementById("action").innerHTML = "buy after 3mins";
+   document.getElementById("action").innerHTML = "3分钟以后做多";
 } else if(open_change > 25){
-   document.getElementById("action").innerHTML = "short after rising stop for 3 mins";
+   document.getElementById("action").innerHTML = "高开走高停止3分钟后做空";
 } else {
-   document.getElementById("action").innerHTML = "wait for 30mins";
+   document.getElementById("action").innerHTML = "等开盘30分钟以后";
 }
+document.getElementById("analysis").innerHTML = "昨天没有趋势";
+ if ((parseFloat(prev_change) > 15) && (prev_trend == "up")) {
+   document.getElementById("analysis").innerHTML = "昨天大涨，收盘最高，今天要涨，需要45分钟以后，或者陷阱大涨后大跌";
+   document.getElementById("trap").innerHTML = "如果出现陷阱大跌，可能不会涨很多，如果出现陷阱大涨，会暴跌，";
+   document.getElementById("hedge").innerHTML = "用1：5买put,同时做多ES";
+ } else if ((parseFloat(prev_change) < 0) && (prev_trend == "up")) {
+   document.getElementById("analysis").innerHTML = "昨天没有涨，但是收盘最高，今天大盘会很强，可能大涨";
+   document.getElementById("trap").innerHTML = "陷阱大跌幅度比较小，不要轻易判断陷阱大涨";
+   document.getElementById("hedge").innerHTML = "用1：5买call,同时做空ES";
+ }
+ document.getElementById("min_3").innerHTML = "没有开盘呢";
+
+ if (parseFloat(o_3) > parseFloat(today_open)) {
+   document.getElementById("min_3").innerHTML = "开盘后冲高，倾向于跌势";
+ } else if (parseFloat(o_3) > 0){
+   document.getElementById("min_3").innerHTML = "开盘后走低，很谨慎，倾向于涨";
+ }
 
 return false;
 }
 </script>
 <body>
 
-Previous close: <input type="text" id="prev_close" name="num1" />
-Previous change: <input type="text" id="prev_change" name="op" />
-Previous trend: <input type="text" id="prev_trend" name="num2" />
-Today's open: <input type="text" id="today_open" name="num2" />
+前一天收盘: <input type="text" id="prev_close" name="num1" value="2697" />
+前一天变动: <input type="text" id="prev_change" name="op" value="25" />
+前一天趋势: <input type="text" id="prev_trend" name="num2" value="up" />
+今天开盘: <input type="text" id="today_open" name="num2" value="2703" />
+
+<p>开盘以后:</p>
 
 <br />
+3 mins: <input type="text" id="o_3"  size="8" value="0"/>
+10 mins: <input type="text" id="o_10" size="8" value="0"/>
+15 mins: <input type="text" id="o_15"  size="8" value="0"/>
+20 mins: <input type="text" id="o_20"  size="8" value="0"/>
+25 mins: <input type="text" id="o_25"  size="8" value="0"/>
+30 mins: <input type="text" id="o_30"  size="8" value="0"/>
+
+<br />
+<br />
+35 mins: <input type="text" id="o_35"  size="8" value="0"/>
+40 mins: <input type="text" id="o_40" size="8" value="0"/>
+45 mins: <input type="text" id="o_45"  size="8" value="0"/>
+50 mins: <input type="text" id="o_50"  size="8" value="0"/>
+55 mins: <input type="text" id="o_55"  size="8" value="0"/>
+60 mins: <input type="text" id="o_60"  size="8" value="0"/>
+<br />
+
 <input type="button" value="Solve" onClick="calc(this)">
 
 <p id="result" name="r1">
@@ -42,6 +79,20 @@ Today's open: <input type="text" id="today_open" name="num2" />
 <br />
 </p>
 
+<p id="analysis" name="r1">
+<br />
+</p>
+<p id="trap" name="r1">
+<br />
+</p>
+
+<p id="hedge" name="r1">
+<br />
+</p>
+
+<p id="min_3" name="r1">
+<br />
+</p>
 
 </body>
 </html>
