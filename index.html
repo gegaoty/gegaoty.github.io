@@ -3,106 +3,207 @@
 <script>
 function calc(form) {
 
-var D = "0";
+var prev_open = document.getElementById("prev_open").value;
+var prev_close = document.getElementById("prev_close").value;
 var prev_change = document.getElementById("prev_change").value;
-var prev_trend = document.getElementById("prev_trend").value;
-var o_30_min = document.getElementById("o_30_min").value;
-var o_45_min = document.getElementById("o_45_min").value;
-var x = document.getElementById("reversal_rise");
-var y = document.getElementById("continuous_two_day");
+var prev_high = document.getElementById("prev_high").value;
+var prev_low = document.getElementById("prev_low").value;
 
-if (x.checked == true) {
-    document.getElementById("overide").innerHTML = "前一天大跌反转，可能连续大涨";
+var D = 0.5;
+var dis = parseFloat(prev_high) - parseFloat(prev_low);
+var curr = parseFloat(prev_close) - parseFloat(prev_low);
+if (dis == 0) {
+    D = 0;
 } else {
-    document.getElementById("overide").innerHTML = "前一天影响不大";
-}
-if (y.checked == true) {
-    document.getElementById("overide").innerHTML = "连续两天大涨，今天低开后，冲高见顶，可以先做多，再做空";
+    D = curr / dis;
 }
 
- if (parseFloat(today_open) - parseFloat(prev_close) > 5) {
-     if ((parseFloat(o_30_min) > parseFloat(prev_close)) && (parseFloat(o_45_min) > parseFloat(prev_close))) {
-        document.getElementById("analysis").innerHTML = "高开后，一直维持高位，很强，可能走出陷阱大跌后大涨";
-	 }
- }
+if (D > 0.6) {
+    if (parseFloat(prev_change) < 12) {
+        document.getElementById("trend").innerHTML = "前一天收盘接近高点，涨幅不大甚至跌，表示很强";
+    } else {
+        document.getElementById("trend").innerHTML = "前一天收盘接近高点，涨幅比较大，如果要继续涨，需要等45分钟，或者出现冲高大跌走势";
+    }
+} else if (D > 0.4) {
+    document.getElementById("trend").innerHTML = "前一天收盘接近中点，没有趋势";
+} else {
+    document.getElementById("trend").innerHTML = "前一天收盘接近低点，偏熊";
+}
 
 return false;
 }
 </script>
 <body>
-<h1>前一天的情况</h1>
+<h1 style="color:Tomato;">前一天的情况</h1>
 
-前一天大跌后反转: <input type="checkbox" id="reversal_rise">
+开盘: <input type="text" id="prev_open"  size="8" value="2722.55"/>
+收盘: <input type="text" id="prev_close"  size="8" value="2727.69"/>
+变动: <input type="text" id="prev_change"  size="8" value="4.65"/>
+最高点: <input type="text" id="prev_high"  size="8" value="2732"/>
+最低点: <input type="text" id="prev_low"  size="8" value="2717"/>
 <br />
-连续两天大涨: <input type="checkbox" id="continuous_two_day">
-<br />
-低开走低大跌: <input type="checkbox" id="drop_huge">
-<br />
+<h1 style="color:Tomato;">前一天的特别走势</h1>
 
-前一天趋势: <input type="text" id="prev_trend" name="num2" value="up" />
+<a href="#prev_day_reversal">前一天大跌后反转</a> 
 <br />
-前一天变动: <input type="text" id="prev_change"  size="8" value="0"/>
-
-<h1>今天的情况</h1>
-<p>开盘以后:</p>
-
+<a href="#continuous_two_day">连续两天大涨</a> 
 <br />
-大幅高开25点以上: <input type="checkbox" id="open_high_huge">
-<br />
-大幅底开25点以上: <input type="checkbox" id="open_low_huge">
+<a href="#drop_huge">低开走低大跌</a> 
 <br />
 
+<h1 style="color:Tomato;">今天的情况</h1>
+<h3 style="color:DodgerBlue;"><em>开盘30分钟以内:</em></h3>
 
-30 mins 最低点: <input type="text" id="o_30_min"  size="8" value="0"/>
-30 mins 最高点: <input type="text" id="o_30_max"  size="8" value="0"/>
+
+1. 大幅低开30点，这个开盘3分钟就可以做
+<br />
+2. 用强力预测走势第一条判断处于升势，低开5个点以上，
+                      开盘3分钟如果先走低，可以用对冲交易方法来做多
+<br />
+3. 大幅高开30点，要等它高开冲高，停止3分钟，可做空
+<br />
+4. 用强力预测走势第一条判断处于跌势，高开5个点以上，
+                      高开冲高，等它停止5分钟后，可以用对冲交易方法来做空
+<br />
+5. 早熟走势中，前一天大涨，第二天应该到1个小时以后再涨，
+             如果30分钟以内就涨，那么可以做空，这个应该用对冲交易方法
+<br />
+6. 4,5 都属于冲高走平走势，应该先买ES，等它走平后，甚至下跌2个点以上
+       可以买入put
 <br />
 
-45 mins 最低点: <input type="text" id="o_45_min"  size="8" value="0"/>
-45 mins 最高点: <input type="text" id="o_45_min"  size="8" value="0"/>
-<br />
 
-60 mins 最低点: <input type="text" id="o_60_min"  size="8" value="0"/>
-60 mins 最高点: <input type="text" id="o_60_min"  size="8" value="0"/>
+<h3 style="color:DodgerBlue;"><em>开盘30分钟以后:</em></h3>
+<br />
+<a href="#trap_drop">陷阱大跌</a> 
+<br />
+<br />
+<a href="#trap_rise">陷阱大涨</a> 
+<br />
+<br />
+<a href="#rise_and_drop">冲高大跌走势</a> 
+<br />
+<br />
 <br />
 
 <input type="button" value="Solve" onClick="calc(this)">
 
-<p id="result" name="r1">
+<p id="trend" name="r1">
 <br />
 </p>
 
-<p id="action" name="r1">
+<a name="trap_drop"></a> 
+<h1 style="background-color:DodgerBlue;"><em>陷阱大跌 </em></h1>
+<b>1. 陷阱大跌的价值在于它后面出现的真实上涨，所以不要去占陷阱大跌的小便宜，如果估计它会走出陷阱大跌，就等着
+ 确认是陷阱大跌后，再买回ES。要坚持拿住，一定要等到最大涨幅或者陷阱大涨走势发生
 <br />
-</p>
-
-<p  id="analysis" name="r1">
 <br />
-</p>
-
-<p id="hedge" name="r1">
+2. 陷阱大跌发生的场景一定是前面大幅震荡，并没有大跌的样子，如果是从开盘一路大跌下来的，那么即使发生            
+   类似的样子，那么大盘最后也会大跌的。这个可以参考下跌后反弹震荡走势            
+   但是如果发生在下跌后半段，那么还是可能大幅反弹的            
 <br />
-</p>
-
-<p id="min_3" name="r1">
 <br />
-</p>
-
-<p id="overide" name="r1">
+   3. 前面走平或者震荡，大盘一般维持一定的升势，表示比较强， 然后连续几分钟下跌，
+       走平或者反弹，再次下跌，一般是2，3个阶段。相对前面沉闷的走势，大盘跌幅显得很大，但是仔细看，一共也只有4，5个点而已，
+     但是因为短时间集中在一起，显得可怕。这时关键在于底部反弹的样子，
+    在从底部起来的时候，前3分钟幅度比较小，相对于跌势而言，或者不动，或者出现反弹后双底，然后逐渐加速上涨。
+    这个就是真实的上涨，有了前面的陷阱大跌，这个上涨会很有力量。它有可能上涨后，
 <br />
-</p>
-
-
-<h1>陷阱大跌</h1>
-<b>1. 看到陷阱大跌走势后，一旦它开始连续3分钟小幅上涨，就要立刻买入call，同时1：5比例做空ES</b>
 <br />
-<b>               确认是陷阱大跌后，再买回ES。要坚持拿住，一定要等到最大涨幅或者陷阱大涨走势发生</b>
+     <img src="small_oscillate_trap.PNG" alt=" small oscilate_trap" width="500" height="377">
 <br />
-<h1>陷阱大涨</h1>
-<b>2. 看到陷阱大涨走势后，一旦它走平10分钟，或者从高点下来2个点，震荡3分钟，要立刻买入put，同时1：5比例做多ES</b>
 <br />
-<b>               确认是陷阱大涨后，再卖掉ES。要坚持拿住，一定要等到最大跌幅或者陷阱大跌走势发生</b>
+   4. 在一个范围大幅震荡，大盘可能是小范围上涨，也可能是一定的跌幅，这样表示不是很强，如果是大幅上涨，通常不会出现陷阱，直接就涨了。
+         在这个范围震荡超过1个小时，在某次向下震荡时候，在低点走平或者稍微反弹后，大幅走低，走低幅度和前面一样
+         走低时间不超过5分钟，这样和前面的走势连起来，跌幅是前面震荡范围的两倍，这个就是陷阱走势. 这时在底部的形状可能回是一个小的双底，
+        然后开始慢慢反弹，显得很弱，这时就应该做多了。2，3分钟后会逐渐加速。这个走势常常有前一天大跌的配合，这样反弹会非常强。
+<br />
+<br />
+      <img src="oscilate_trap.PNG" alt="oscilate_trap" width="500" height="377">
+</b>
+    
+   <h1 style="background-color:red;"><em>别的陷阱大跌， </em></h1>
+     A.长时间下跌后，下跌时间超过30分钟，这时可以看到它下跌的速度，如果出现加速下跌，斜率是前面斜率的两倍
+          那么可以判断是陷阱下跌，未来一个小时，不会出现比陷阱更低的点，如果有，那么这个就不是陷阱
+          那么就是陷阱，反手做多
+<br />
+    B. 在一个范围大幅震荡，一般是小幅上涨的样子，这样表示不是很强，如果是大幅上涨，通常不会出现陷阱，直接就涨了。
+         在这个范围震荡超过1个小时，在某次向下震荡时候，在低点走平或者稍微反弹后，大幅走低，走低幅度和前面一样
+         走低时间不超过5分钟，这样和前面的走势连起来，跌幅是前面震荡范围的两倍，这个就是陷阱走势
+<br />
+    C. 从一个平台下落，在下落以前并没有明显的跌势，就是说是突然下跌的，
+          下跌时间超过10分钟，跌幅也比较大，超过10个点，具体点数和当天的VIX有关
+          反弹30%的跌幅，就是说如果跌10个点，回撤3个点，回撤时间大约5分钟
+          再次下跌，这次跌幅只有第一次跌幅的一半，下跌时间也只有第一次的一半
+                    然后大幅反弹，这个就是当天最低点了。
+<br />
+    D. 先从高点下跌，下跌10，20几分钟后，反弹一些，然后突然一条红线，
+         幅度比较大，但是持续只有1分钟, 这个就是底部了。可以等2，3分钟，做多
+<br />
+    F。只要不是下跌的第一阶段，那么一旦出现加速下跌后，就等2，3分钟就可以做多了  
+<br />
+    G. 短小精干的陷阱大跌，在比较强的市场，大盘要高开后，震荡。前面比较沉闷，
+             然后开始连续几分钟下跌，然后反弹2，3分钟
+            再次一个红线，幅度比较大，但是也只有2个点而已。然后等2，3分钟，就可以做多了
+<br />
+
+<a name="trap_rise"></a> 
+<h1 style="background-color:DodgerBlue;"><em>陷阱大涨</em></h1>
+   1. 长时间震荡走平，第一分钟或者第二分钟上涨幅度就很大。那么这个就是陷阱大涨。这个一定要和真实上涨区别。
+   2. 大幅低开后，没有立刻反弹，而是一直震荡超过40分钟，然后直线上涨，第一分钟和第二分钟幅度很大。
+
+<a name="rise_and_drop"></a> 
+<h1 style="background-color:DodgerBlue;"><em>冲高大跌</em></h1>
+<b>1. 这个有点象陷阱大涨，但是在大跌前，迹象不明显，所以无法抄顶，只能顺势而为
+<br />
+2. 不合理，反常的冲高，比如它冲高的时候，回调很小，或者前一天走势不允许它过快的上涨，这时就要警惕
+<br />
+3. 在某个点，它冲高后，走平，然后大跌，这个要和前面相比较，它会连续跌5分钟以上，每分钟跌幅都不大
+    这时可以顺势做空ES。但是还不要上put，因为它可能反弹
+<br />
+4. 下跌后，它可能较大幅度反弹5分钟，也可能走平5分钟后继续大跌，这时这个继续大跌，就是下跌的底部了。
+<br />
+5. 这个走势绝对不能很快就做多，它会跌倒出现底部的形态才结束，但是因为大跌前涨的很强。它现在好容易下来了，
+很容易让人想要做多。
+<br />
+      <img src="rise_and_drop.PNG" alt="rise and drop" width="500" height="377">
+<br />
+      <h3 style="color:MediumSeaGreen;">图一：开盘后一直走高，要看出这个不是震荡，不要和陷阱大跌混淆起来</h3>
+      
+<br />
+<br />
+      <img src="rise_and_drop_at_end.PNG" alt="rise and drop" width="500" height="377">
+<br />
+<h3 style="color:MediumSeaGreen;">图二：这个一直到收盘前才冲高大跌</h3>
+</b>
 
 
+<a name="prev_day_reversal"></a> 
+<h2 style="background-color:DodgerBlue;"> <em>全力以赴低开走低反转走势 </em> </h2>
+<b> 1. 前一天大跌或者连续几天大跌，今天低开走低</b>
+<br />
+<b> 2. 低开走低后，要么幅度很大，接近最大可能低点，要么接近前一天跌幅 </b>
+<br />
+<b> 3. 寻找它见底的迹象，一旦发现，这个不会再回头，可以做多</b>
+<br />
+<b> 4. 这个会开启连续大涨走势，未来一天或者几天可以逢低做多 </b>
+<br />
+
+<a name="continuous_two_day"></a> 
+<h2 style="background-color:DodgerBlue;"> <em>连续两天大涨 </em> </h2>
+<b> 1. 今天可能低开后，冲高，盘中到达高点后，回头，收盘到开盘点</b>
+<br />
+<b> 2. 低开后，冲高大跌，然后震荡，一般收盘要么平盘，要么小幅上涨</b>
+<br />
+
+<a name="drop_huge"></a> 
+<h2 style="background-color:DodgerBlue;"> <em>前一天低开走低大跌 </em> </h2>
+<b> 1. 今天如果没有任何回头的大涨，那么收盘会吐出所有涨幅</b>
+<br />
+<b> 2. 如果高开后，走低，但是没有变红，那么会大涨 </b>
+<br />
+<b> 3. 小幅高开后，会跌，或者不确定 </b>
+<br />
 </body>
 </html>
 
