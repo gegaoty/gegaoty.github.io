@@ -36,11 +36,11 @@ return false;
 <body>
 <h1 style="color:Tomato;">前一天的情况</h1>
 
-开盘: <input type="text" id="prev_open"  size="8" value="2722.55"/>
-收盘: <input type="text" id="prev_close"  size="8" value="2727.69"/>
-变动: <input type="text" id="prev_change"  size="8" value="4.65"/>
-最高点: <input type="text" id="prev_high"  size="8" value="2732"/>
-最低点: <input type="text" id="prev_low"  size="8" value="2717"/>
+开盘: <input type="text" id="prev_open"  size="8" value="2716.55"/>
+收盘: <input type="text" id="prev_close"  size="8" value="2713.69"/>
+变动: <input type="text" id="prev_change"  size="8" value="-7"/>
+最高点: <input type="text" id="prev_high"  size="8" value="2719"/>
+最低点: <input type="text" id="prev_low"  size="8" value="2710"/>
 <br />
 <input type="button" value="Solve" onClick="calc(this)">
 
@@ -61,7 +61,8 @@ return false;
 3. 如果趋势在日中已经结束。应该放弃，后面的走势变得不可预测。
 <br />
 <br />
-4. 只预测未来1，2个小时的交易。不要臆想今天会如何。
+4. 一方面集中注意力预测未来1，2个小时的交易。但是也要根据前一天的走势，
+随时对今天的走势有所估计。要记住大盘总是选择最有力量的走势。或者我只做最有力量的走势。
 <br />
 <br />
 5. 跌势趋势走势随时可能变成陷阱走势而反转。要注意大盘的走势。
@@ -71,7 +72,7 @@ return false;
 我很容易被它诱惑而做空。它一般就是不涨也会在高位徘徊很久。
 <br />
 <br />
-7. 冲高大跌走势是个很强的跌势，不要轻易做多。。
+7. 冲高大跌走势是个很强的跌势，不要轻易做多。
 <br />
 <br />
 8. 长期下跌时候，如果出现疑似底部。如果在底部徘徊30分钟以上，应该按照走低震荡走势来做。
@@ -83,10 +84,17 @@ return false;
 10. 在大跌前是否出现冲高的样子非常重要，这个决定出现陷阱大跌，还是冲高大跌。陷阱大跌会大涨，而冲高大跌会大跌。
 <br />
 <br />
-10. 如果发现似乎有不对劲的地方，应该立刻对冲用1：5的比例，确认后，割掉一边，另一边拿着自己跑。
+11. 如果发现似乎有不对劲的地方，应该立刻对冲用1：5的比例，确认后，割掉一边，另一边拿着自己跑。
+<br />
+<br />
+12. 相信自己的判断，如果认为大盘处于一个尴尬的地位，不要勉强去做。耐心等待机会。
 </h3>
 
 <h1 style="color:Tomato;">前一天的特别走势</h1>
+
+<a href="#fully_up_day">前一天全幅度上涨</a> 
+<br />
+<br />
 
 <a href="#prev_day_reversal">前一天大跌后反转</a> 
 <br />
@@ -101,7 +109,7 @@ return false;
 <br />
 
 <h1 style="color:Tomato;">今天的情况</h1>
-<h3 style="color:DodgerBlue;"><em>开盘30分钟以内:</em></h3>
+<h2 style="color:DodgerBlue;"><em>开盘30分钟以内:</em></h2>
 
 
 1. 大幅低开30点，这个开盘3分钟就可以做
@@ -124,18 +132,44 @@ return false;
 <br />
 
 
-<h3 style="color:DodgerBlue;"><em>开盘30分钟以后:</em></h3>
+<h2 style="color:DodgerBlue;"><em>应用于所有时段的情况:</em></h2>
+
+<h3 style="color:DEEPPINK;"><em>空多都可能的走势:</em></h3>
+
+<a href="#drop_and_oscilate">冲高下跌后震荡走势</a> 
 <br />
+<br />
+
+<a href="#bottom_of_drop">大跌时候，底部特征</a> 
+<br />
+<br />
+
+<a href="#rise_flat_shape">冲高走平时候顶部形状决定以后走势</a> 
+<br />
+<br />
+
+<a href="#open_fall_rise">开盘后走低反弹走势</a> 
+<br />
+<br />
+
+<h3 style="color:DEEPPINK;"><em>做多走势:</em></h3>
 <a href="#trap_drop">陷阱大跌</a> 
 <br />
 <br />
+
+<a href="#feature_of_real_rise">可持续性的真实上涨</a> 
+<br />
+<br />
+
+<a href="#rise_and_pull_back">高点拉回走势</a> 
+<br />
+<br />
+
+<h3 style="color:DEEPPINK;"><em>做空走势:</em></h3>
 <a href="#trap_rise">陷阱大涨</a> 
 <br />
 <br />
 <a href="#rise_and_drop">冲高大跌走势</a> 
-<br />
-<br />
-<a href="#bottom_of_drop">大跌时候，底部特征</a> 
 <br />
 <br />
 
@@ -147,19 +181,12 @@ return false;
 <br />
 <br />
 
-<a href="#feature_of_real_rise">可持续性的真实上涨</a> 
-<br />
-<br />
 
 <a href="#two_stage_drop">两段式下跌走势</a> 
 <br />
 <br />
 
-<a href="#rise_flat_shape">冲高走平时候顶部形状决定以后走势</a> 
-<br />
-<br />
-
-<h3 style="color:DodgerBlue;"><em>交易日最后两个小时:</em></h3>
+<h2 style="color:DodgerBlue;"><em>交易日最后两个小时:</em></h2>
 <br />
 <a href="#last_10_mins">最后10分钟交易方法</a> 
 <br />
@@ -173,29 +200,62 @@ return false;
 <br />
 <br />
 
-<a href="#drop_and_oscilate">大跌后震荡走势</a> 
+open_fall_rise
+
+<a name="open_fall_rise"></a> 
+<h1 style="background-color:DodgerBlue;"><em>开盘后走低反反弹走势 </em></h1>
+<b>
+ 1. 开盘如果高开，并且走低时候，最低点仍然是涨的，那么当天涨的可能很大。
 <br />
 <br />
+ 2. 这个走势变化很多。所以要具体分析。刚刚开盘的前几分钟也很重要。
+ 3. 下跌陡峭，反弹缓慢，表示会涨，而下跌和反弹差不多，甚至反弹更陡峭，那么表示会跌。
+
+<img src="open_drop_rebound.PNG" alt="oscilate_trap" width="1000" height="700">
+<h3 style="color:MediumSeaGreen;">图示：这个走势，一开盘就稍微震荡了3，4分钟，然后走低。
+走低的角度比较陡峭，然而反弹的角度很缓慢。这个其实就是陷阱大跌走势。
+陷阱大跌需要前面震荡，虽然3，4分钟也算了。然后下跌陡峭，而反弹缓慢。这个看到它反弹
+缓慢就可以做多了。
+</h3>
+
+<img src="open_drop_rebound_0.PNG" alt="oscilate_trap" width="1000" height="700">
+<h3 style="color:MediumSeaGreen;">图示：这个开盘立刻走低，然后反弹。看起来反弹甚至比走低还要迅速。
+这个说明不对劲。可以在反弹停止后，开始走低两分钟时，做空。这个类似冲高走低走势。
+</h3>
+
+<img src="open_drop_rebound_1.PNG" alt="oscilate_trap" width="1000" height="700">
+<h3 style="color:MediumSeaGreen;">图示：这个和第一个类似，开始走平，然后走低，反弹缓慢。
+反弹回原位后，稍微走低一些，然后走平。是个非常稳健的做多。
+</h3>
+<img src="open_drop_rebound_2.PNG" alt="oscilate_trap" width="1000" height="700">
+<h3 style="color:MediumSeaGreen;">图示：这个和第一个类似，开始走平，然后走低，反弹缓慢。
+反弹的时候还不断的下跌，显得很弱。到后面才加速。
+</h3>
+
 
 <a name="drop_and_oscilate"></a> 
-<h1 style="background-color:DodgerBlue;"><em>大跌后震荡走势 </em></h1>
+<h1 style="background-color:DodgerBlue;"><em>冲高下跌后震荡走势 </em></h1>
 <b>
- 1. 长时间下跌，然后在某个时候开始走平。这时判断走平后的走向
+ 1. 这个属于冲高下跌的后续走势，只有冲高下跌才能应用，冲高下跌后，然后在某个时候开始走平。这时判断走平后的走向
 <br />
 <br />
  2. 走平超过30分钟，就算是走平，否则可能会在30分钟以内涨回去，那么就不是这个走势。
-在走平期间，如果大盘有低于开始走平点，然后又拉回的走势，那么最后大盘会继续大跌。这个走平只是休息一下。
+在走平期间，如果大盘有低于开始走平点，至少低一个点。然后又拉回的走势，那么最后大盘会继续大跌。这个走平只是休息一下。
 后门的跌势会更加猛烈。即使在走平前大盘加速下跌，看起来好像到底的样子。这个也要看走平后的走势。
 3. 如果大跌后，震荡期间明显高于走平开始的点，那么最后大盘会反弹。
 </b>
 <br />
 <br />
 <img src="trap_drop_rise_drop.PNG" alt="oscilate_trap" width="1000" height="700">
-<h3 style="color:MediumSeaGreen;">图示：在12：40分钟出现加速下跌，好像是要反弹到底了。结果大盘没有反弹。
+<h3 style="color:MediumSeaGreen;">图示：在12：40出现加速下跌，好像是要反弹到底了。结果大盘没有反弹。
 而是在低点徘徊超过30分钟，中间还有更低的点，这个说明要跌。这种情况应该先做多，但是如果超过30分钟没有反弹
 那么就当震荡走势来做了。走低震荡走势中，如果有比开始走低点更低的点，那么震荡结束后，会大跌。
 </h3>
 
+<img src="single_bottom.PNG" alt="rise and drop" width="1000" height="700">
+<h3 style="color:MediumSeaGreen;">图示：开盘冲高后，一路大跌。在11：25分加速下跌到达底部，立刻反弹。超过30分钟都没有回到这个底部。
+这个就是真的底部，再加上这天是大幅高开走势，所以可以做多。
+</h3>
 
 <a name="last_30_min_up"></a> 
 <h1 style="background-color:DodgerBlue;"><em>大盘收盘前上涨后，最后30分钟是否冲高 </em></h1>
@@ -350,6 +410,41 @@ return false;
 <br />
 <br />
 
+<a name="rise_and_pull_back"></a> 
+<h1 style="background-color:DodgerBlue;"><em>高点拉回走势 </em></h1>
+<b>
+0. 判断是否最后要反弹，高点拉回后的幅度很重要，第一次高点拉回后
+    拉回的幅度应该超过主升幅的一半以上，显得要跌回去的样子，这样最后才会大涨
+    而且在最后主升幅开始以前，如果又震荡，不会比前面高点高，
+    一个相反的情况是，大涨创新高后，回调幅度不大，反弹，再次创新高，
+    但是新高幅度比前面新高稍微高一些，再次下来，形成震荡，这样最后不会冲高
+<br />
+<br />
+1. 这个和冲高大跌模式有矛盾。关键在于时间，如果过了一个小时，大盘没有反弹意思，而是离开高点很远。
+那么就是冲高大跌。而如果大盘下跌后，很快就回到高点附近，那么就是要继续大涨的样子。应该做多。
+如果能用其他条件，例如幅度，前一天或者前几天的走势，来判断，就更加准确了。
+
+<br />
+<br />
+     <img src="pull_back_and_rise.PNG" alt=" drop and shak and drop huge" width="1000" height="700">
+<h3 style="color:MediumSeaGreen;">图示：在12：20开始拉回。看起来像是走出冲高大跌走势。
+然而过了一个小时，仍然没有跌。这就说明不是这个走势。而是高点拉回走势。应该关掉空仓，反手做多。
+
+</h3>
+
+     <img src="pull_back_and_rise_0.PNG" alt=" drop and shak and drop huge" width="1000" height="700">
+<h3 style="color:MediumSeaGreen;">图示：在12：40开始拉回。看起来像是走出冲高大跌走势。
+然而过了一个小时，仍然没有跌。这就说明不是这个走势。而是高点拉回走势。应该关掉空仓，反手做多。
+
+</h3>
+
+     <img src="pull_back_and_rise_1.PNG" alt=" drop and shak and drop huge" width="1000" height="700">
+<h3 style="color:MediumSeaGreen;">图示：这个则是失败走势。一方面盘中涨幅已经很大了。符合幅度交易模式。
+另外，它从高点下落后，40分钟以后，就很低了。没有回到高点附近。说明要跌。
+
+</h3>
+
+
 <a name="feature_of_real_rise"></a> 
 <h1 style="background-color:DodgerBlue;"><em>可持续性的真实上涨 </em></h1>
 <b>
@@ -357,7 +452,11 @@ A。 真实的上涨，特别是从陷阱大跌出来的上涨，开始都是比
 到了某个点，加速上涨，这时千万不要以为到顶了。其实这个时候，大盘一般还要上去1到2个台阶，才算结束。
 <br />
 <br />
+B。 真实的上涨，上涨一段时间后，会走平很久。这时观察走平的样子，如果很平，或者似乎向下，那么会继续上涨。
+
 <br />
+<br />
+C。慢慢上涨时候，有时候会猛然加速，似乎到顶了。但是其实还会接着涨几个台阶才算完。
      <img src="normal_rise_and_rise_and_drop.PNG" alt=" drop and shak and drop huge" width="1000" height="700">
 <h3 style="color:MediumSeaGreen;">图示：11：30开始，上涨幅度很小，但是持续时间长。直到12：00，猛然加速
 但是这个时候，也不能就算了。而且要继续拿住。
@@ -393,7 +492,7 @@ B。跌幅大小是相对而言，相对于前面的走势，比大小。有时�
 <a name="drop_and_shake_big_drop"></a> 
 <h1 style="background-color:DodgerBlue;"><em>下跌后反弹震荡走低最后大跌走势 </em></h1>
 <b>
-A。 这个走势其实就是冲高大跌走势，前面一定有冲高的样子，然后连续下跌，但是反弹开始比较厉害
+A。 这个走势其实就是冲高大跌走势，前面一定有冲高的样子，创新高，然后连续下跌，但是反弹开始比较厉害
    然后慢慢的反弹越来越弱，最后大跌。
 <br />
 <br />
@@ -529,8 +628,8 @@ E.  它比和冲高大跌不同的地方是，冲高大跌的冲高时间很长�
 <a name="rise_and_drop"></a> 
 <h1 style="background-color:DodgerBlue;"><em>冲高大跌</em></h1>
 <b>
-0. 冲高时间至少30分钟，越长越好，
-冲高期间没有明显下跌的走势，它下跌的前三分钟就会比较大，所以和陷阱大跌类似
+0. 冲高时间可能很长，也可能只有几分钟。但是是连续冲高。一定要创新高，如果低于新高，那么也可能跌，那是另外一个走势了。
+冲高期间没有明显下跌的走势，它下跌的前三分钟就会比较大，所以和陷阱大跌类似。这个是基本走势。
 <br />
 <br />
 
@@ -546,11 +645,7 @@ E.  它比和冲高大跌不同的地方是，冲高大跌的冲高时间很长�
 也可能，冲高一下创新高，立刻下跌。这种属于创新高。
 <br />
 <br />
-4. 还有一种情况是接近新高后，突然下挫。
-
-<br />
-<br />
-5. 不合理，反常的冲高，比如它冲高的时候，回调很小，或者前一天走势不允许它过快的上涨，这时就要警惕
+4. 不合理，反常的冲高，比如它冲高的时候，回调很小，或者前一天走势不允许它过快的上涨，这时就要警惕
 <br />
 <br />
 5. 这个走势绝对不能很快就做多，它会跌倒出现底部的形态才结束，但是因为大跌前涨的很强。它现在好容易下来了，
@@ -583,6 +678,21 @@ E.  它比和冲高大跌不同的地方是，冲高大跌的冲高时间很长�
 
 </b>
 
+<a name="fully_up_day"></a> 
+<h2 style="background-color:DodgerBlue;"> <em>前一天全幅度上涨 </em> </h2>
+<b> 
+1. 前一天的涨幅远远超过普通的大涨。显得很强。
+<br />
+<br />
+2. 第二天如果低开，那么会涨，如果高开，那么会在徘徊后，冲高。
+<br />
+<br />
+3. 冲高后，会跌。可能走出幅度走势，或者冲高走平走势。
+<br />
+<br />
+
+
+</b>
 
 <a name="prev_day_reversal"></a> 
 <h2 style="background-color:DodgerBlue;"> <em>全力以赴低开走低反转走势 </em> </h2>
