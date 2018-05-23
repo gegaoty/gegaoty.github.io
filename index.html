@@ -36,11 +36,11 @@ return false;
 <body>
 <h1 style="color:Tomato;">前一天的情况</h1>
 
-开盘: <input type="text" id="prev_open"  size="8" value="2728"/>
-收盘: <input type="text" id="prev_close"  size="8" value="2733"/>
-变动: <input type="text" id="prev_change"  size="8" value="20"/>
-最高点: <input type="text" id="prev_high"  size="8" value="2739"/>
-最低点: <input type="text" id="prev_low"  size="8" value="2726"/>
+开盘: <input type="text" id="prev_open"  size="8" value="2738"/>
+收盘: <input type="text" id="prev_close"  size="8" value="2724"/>
+变动: <input type="text" id="prev_change"  size="8" value="-8"/>
+最高点: <input type="text" id="prev_high"  size="8" value="2741"/>
+最低点: <input type="text" id="prev_low"  size="8" value="2722"/>
 <br />
 <input type="button" value="Solve" onClick="calc(this)">
 
@@ -62,7 +62,7 @@ return false;
 
 0. 自己的走势并非完全，如果碰到明显错误的走法，不要硬套走势。只做那些有把握的走势。
 其实有了四大基本走势，陷阱大跌，陷阱大涨，冲高大跌走势，高点拉回走势，已经足够了。
-要有耐心等待自己的机会出现。
+要有耐心等待自己的机会出现。其中陷阱大跌和陷阱大涨还有高点拉回可以用期权，而冲高大跌以及走低震荡可以用期指。
 <br />
 <br />
 
@@ -87,7 +87,8 @@ return false;
 我很容易被它诱惑而做空。它一般就是不涨也会在高位徘徊很久。
 <br />
 <br />
-7. 冲高大跌走势是个很强的跌势，不要轻易做多。
+7. 如果基本走势开始于后半场，特别是最后两个小时，不能反向试图抄底或者抄顶，这个非常难预测。一旦错误，损失惨重。
+我经常试图抄收盘前几分钟的低，这个是不可预测的。没有必要和它死磕。
 <br />
 <br />
 8. 长期下跌时候，如果出现疑似底部。如果在底部徘徊30分钟以上，应该按照走低震荡走势来做。
@@ -113,7 +114,7 @@ return false;
 <br />
 B。下跌后反弹震荡走低最后大跌走势。
 <br />
- C。幅度交易模式会有重叠。
+ C。幅度交易模式。
 <br />
 幅度交易可能和前面两个之一同时发生。
 
@@ -124,7 +125,22 @@ B。下跌后反弹震荡走低最后大跌走势。
 <br />
 16. 大跌走势在发生前通常都有类似陷阱大涨的走势，就是说，走平几分钟后，连续几分钟比较大幅度上涨。实际
 总幅度不大。
+<br />
+<br />
+17. 大跌走势发生后，先是慢慢下跌，在某个点开始，非常严格的走平，5到20分钟，如果我已经做空，
+这个时候常常让我害怕它会反弹而逃跑，
+如果我没有做空，我会忍不住进去做多。然后大盘加速下跌。这个下跌也不是底部，常常盘整后，后面还有更低点。
+这个时候一定要坚持做空。不要害怕。
+
 </h3>
+
+<h1 style="color:Tomato;">走势定义</h1>
+1. 反弹：回撤跌幅超过50%才叫反弹，如果很小，则不是反弹。
+<br />
+<br />
+<a href="#triangle_state">辅助走势之三角验证走势</a> 
+<br />
+<br />
 
 
 <h1 style="color:Tomato;">前一天的特别走势</h1>
@@ -206,6 +222,10 @@ B。下跌后反弹震荡走低最后大跌走势。
 <br />
 
 <h3 style="color:DEEPPINK;"><em>做空走势:</em></h3>
+<a href="#small_trap_small_rise">小型陷阱大涨加小型冲高走低</a> 
+<br />
+<br />
+
 <a href="#trap_rise">陷阱大涨</a> 
 <br />
 <br />
@@ -239,6 +259,28 @@ B。下跌后反弹震荡走低最后大跌走势。
 <a href="#last_30_min_up">大盘收盘前上涨后，最后30分钟是否冲高</a> 
 <br />
 <br />
+
+<a name="triangle_state"></a> 
+<h1 style="background-color:DodgerBlue;"><em>辅助走势之三角验证走势 </em></h1>
+<b>
+ 1. 先上升后下降或者先下降后上升，两者之间距离很近，不超过20分钟，形成一个三角型。
+在另外的走势验证下，这个走势可以确认要做的走势
+<br />
+<br />
+<img src="small_trap_small_rise.PNG" alt="oscilate_trap" width="1000" height="700">
+<h3 style="color:MediumSeaGreen;">图示：在2：30分钟出现先上升后下降，上升同样的
+点数用了5分钟，而下降同样的点数用了7分钟，加上前面出现陷阱大涨和冲高走势，可以确认要大跌了。
+</h3>
+
+<img src="open_drop_rebound_0.PNG" alt="oscilate_trap" width="1000" height="700">
+<h3 style="color:MediumSeaGreen;">图示：这个三角走势，上升用了12分钟而下降用了14分钟，说明上升陡峭。
+加上开盘后立刻走低，没有震荡，说明这个是个冲高大跌走势
+</h3>
+
+<img src="open_drop_rebound_1.PNG" alt="oscilate_trap" width="1000" height="700">
+<h3 style="color:MediumSeaGreen;">图示：这个三角形下降用了5分钟，而上升用了10分钟，加上开盘时候走平
+5分钟。所以这个是陷阱大跌走势
+</h3>
 
 <a name="open_fall_rise"></a> 
 <h1 style="background-color:DodgerBlue;"><em>开盘后走低反弹走势 </em></h1>
@@ -633,6 +675,27 @@ D。 不能提前做，要等它反弹后，确认比跌点要低才行。
          幅度比较大，但是持续只有1分钟, 这个就是底部了。可以等2，3分钟，做多
 <br />
     F。只要不是下跌的第一阶段，那么一旦出现加速下跌后，就等2，3分钟就可以做多了  
+<br />
+
+<a name="small_trap_small_rise"></a> 
+<h1 style="background-color:DodgerBlue;"><em>小型陷阱大涨加小型冲高走低</em></h1>
+<b>   
+1. 这个走势一般发生在后半场。大盘在经过一系列运动后，发生小型的陷阱大涨走势，就是说从走平的样子，突然拔起来，
+前几分钟涨幅比较大。但是比起真正的陷阱大涨来说，还差些火候。但是也算是一个陷阱大涨走势了。
+<br />
+<br />
+2. 同时它上涨后的最高点，也是最近两个小时的最高点。虽然不是全天最高点。但是最近两个小时最高点，也算是冲高
+大跌了。
+
+<br />
+<br />
+      <img src="small_trap_small_rise.PNG" alt="rise and drop" width="1000" height="700">
+<br />
+      <h3 style="color:MediumSeaGreen;">图示：2:05附近，出现疑似陷阱大涨走势，这时可以实验用ES做空
+这时走平接近25分钟后，走高，这时创出最近两个小时新高点。同时走出三角验证走势。可以确认这个会大跌。
+这种走势不能捞底，如果错过就算了。如果做空，那么要拿住时间长一些。
+</h3>
+
 <br />
 
 <a name="trap_rise"></a> 
