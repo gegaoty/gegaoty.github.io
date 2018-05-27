@@ -36,11 +36,11 @@ return false;
 <body>
 <h1 style="color:Tomato;">前一天的情况</h1>
 
-开盘: <input type="text" id="prev_open"  size="8" value="2738"/>
-收盘: <input type="text" id="prev_close"  size="8" value="2724"/>
-变动: <input type="text" id="prev_change"  size="8" value="-8"/>
-最高点: <input type="text" id="prev_high"  size="8" value="2741"/>
-最低点: <input type="text" id="prev_low"  size="8" value="2722"/>
+开盘: <input type="text" id="prev_open"  size="8" value="2724"/>
+收盘: <input type="text" id="prev_close"  size="8" value="2721"/>
+变动: <input type="text" id="prev_change"  size="8" value="-6"/>
+最高点: <input type="text" id="prev_high"  size="8" value="2727"/>
+最低点: <input type="text" id="prev_low"  size="8" value="2715"/>
 <br />
 <input type="button" value="Solve" onClick="calc(this)">
 
@@ -48,6 +48,21 @@ return false;
 <br />
 </p>
 =========================================================================================
+<h1 style="color:DodgerBlue;"><em>操作规则:</em></h1>
+1. 刚刚开盘时候，如果不是大幅高开低开的走势，但是符合一些原则，应该用ES来做。这样一旦错误，可以
+有挽回的机会。
+<br />
+<br />
+
+2. 不要随便对冲，一般情况不需要对冲，而如果发现自己确实错了，这时可以对冲。挽回损失。不然自己
+只是晚一些对了，对冲反而造成损失。
+<br />
+<br />
+3. 克服自己的恐惧，自己常常因为害怕而对冲，然而心理也明白自己其实是对的。不用对冲。这时要坚持住。
+<br />
+<br />
+
+
 <h1 style="color:DodgerBlue;"><em>每天注意事项:</em></h1>
 
 <h3 style="color:DodgerBlue;">
@@ -229,6 +244,10 @@ B。下跌后反弹震荡走低最后大跌走势。
 <br />
 <br />
 
+<a href="#pre_mature_state">早熟陷阱大跌</a> 
+<br />
+<br />
+
 <a href="#bottom_of_drop">大跌时候，底部特征</a> 
 <br />
 <br />
@@ -236,6 +255,10 @@ B。下跌后反弹震荡走低最后大跌走势。
 <a href="#trap_rise">陷阱大涨</a> 
 <br />
 <br />
+<a href="#failed_trap_rise">失败的陷阱大涨</a> 
+<br />
+<br />
+
 <a href="#small_trap_small_rise">小型陷阱大涨加小型冲高走低</a> 
 <br />
 <br />
@@ -286,6 +309,21 @@ B。下跌后反弹震荡走低最后大跌走势。
 <br />
 <br />
 
+<a name="pre_mature_state"></a> 
+<h1 style="background-color:DodgerBlue;"><em>早熟陷阱大跌 </em></h1>
+<b>
+1. 陷阱大跌的价值在于它后面出现的真实上涨，所以不要去占陷阱大跌的小便宜，真实的上涨前面都会示弱，要么刚刚开始涨就回调，然后
+走平5分钟以上，要么稍微涨一些后，就走平10分钟以上。走平的形状显得要跌的样子，这样会让很多做多的人心存疑惑而退出。
+也会让一些做空的人进来。如果没有走平，就连续大涨，如果超过两个台阶，
+那么应该在第二个台阶退出，然后继续观察。可能是早熟的大涨。
+<br />
+<br />
+</b>
+     <img src="pre_mature_trap_drop.PNG" alt=" small oscilate_trap" width="1000" height="700">
+<br />
+<h3 style="color:MediumSeaGreen;">图示：一开盘就震荡3，4分钟，然后走低，然后反弹。从9:50到9：55不能算走平，
+因为还没有出了开盘高点。这样，大盘没有什么回调或者走平就连续两个台阶的上涨。不可持续，最后大跌。形成冲高大跌。
+</h3>
 
 
 <a name="mini_state"></a> 
@@ -670,8 +708,10 @@ D。 不能提前做，要等它反弹后，确认比跌点要低才行。
 
 <a name="trap_drop"></a> 
 <h1 style="background-color:DodgerBlue;"><em>陷阱大跌 </em></h1>
-<b>1. 陷阱大跌的价值在于它后面出现的真实上涨，所以不要去占陷阱大跌的小便宜，如果估计它会走出陷阱大跌，就等着
- 确认是陷阱大跌后，再买回ES。要坚持拿住，一定要等到最大涨幅或者陷阱大涨走势发生
+<b>1. 陷阱大跌的价值在于它后面出现的真实上涨，所以不要去占陷阱大跌的小便宜，真实的上涨前面都会示弱，要么刚刚开始涨就回调，然后
+走平5分钟以上，要么稍微涨一些后，就走平10分钟以上。走平的形状显得要跌的样子，这样会让很多做多的人心存疑惑而退出。
+也会让一些做空的人进来。如果没有走平，就连续大涨，如果超过两个台阶，
+那么应该在第二个台阶退出，然后继续观察。可能是早熟的大涨。
 <br />
 <br />
 2. 陷阱大跌发生的场景一定是前面小幅震荡，并没有大跌的样子，如果是从开盘一路大跌下来的，那么即使发生            
@@ -686,6 +726,7 @@ D。 不能提前做，要等它反弹后，确认比跌点要低才行。
     这个就是真实的上涨，有了前面的陷阱大跌，这个上涨会很有力量。要坚持拿着。
 <br />
 <br />
+
      <img src="small_oscillate_trap.PNG" alt=" small oscilate_trap" width="1000" height="700">
 <br />
 <h3 style="color:MediumSeaGreen;">图示：中幅度高开后，基本处于震荡，超过一个小时，突然大跌，所以很大可能是陷阱，果然如此。
@@ -741,6 +782,19 @@ D。 不能提前做，要等它反弹后，确认比跌点要低才行。
 
 <br />
 
+<a name="failed_trap_rise"></a> 
+<h1 style="background-color:DodgerBlue;"><em>失败的陷阱大涨</em></h1>
+<br />
+失败的陷阱大涨走势。这个非常象陷阱大涨。但是如果仔细观察，可以看到第一分钟大涨后，回调了4分钟，然后才大涨。这个和第一分钟就连续
+大涨不同。所以最后大涨了。而没有跌。还有一个原因，也许是本质的原因，在大涨前，大盘就一直在上涨了。只是幅度很小。
+这个算加速上涨了。
+      <img src="failed_trap_rise.PNG" alt="rise and drop" width="1000" height="700">
+<br />
+      <h3 style="color:MediumSeaGreen;">图示：下午2点，宣布消息，从震荡中，第一分钟大涨后，回调了4分钟，才大涨。所以不是陷阱大涨。
+这个应该用对冲模式，以防止自己判断错误。等后面确认后，可以做多。在2：30到3；00之间，出现了陷阱大跌走势，可以
+看到下跌陡峭而上涨缓慢。
+</h3>
+
 <a name="trap_rise"></a> 
 <h1 style="background-color:DodgerBlue;"><em>陷阱大涨</em></h1>
 <b>   
@@ -755,25 +809,7 @@ D。 不能提前做，要等它反弹后，确认比跌点要低才行。
       <img src="trap_rise.PNG" alt="rise and drop" width="1000" height="700">
 <br />
       <h3 style="color:MediumSeaGreen;">图示：下午2点，宣布消息，从震荡中，第一分钟就大涨</h3>
-
 <br />
-3. 失败的陷阱大涨走势。这个非常象陷阱大涨。但是如果仔细观察，可以看到第一分钟大涨后，回调了4分钟，然后才大涨。这个和第一分钟就连续
-大涨不同。所以最后大涨了。而没有跌。还有一个原因，也许是本质的原因，在大涨前，大盘就一直在上涨了。只是幅度很小。
-这个算加速上涨了。
-<br />
-<br />
-
-      <img src="failed_trap_rise.PNG" alt="rise and drop" width="1000" height="700">
-<br />
-      <h3 style="color:MediumSeaGreen;">图示：下午2点，宣布消息，从震荡中，第一分钟大涨后，回调了4分钟，才大涨。所以不是陷阱大涨。
-这个应该用对冲模式，以防止自己判断错误。等后面确认后，可以做多。在2：30到3；00之间，出现了陷阱大跌走势，可以
-看到下跌陡峭而上涨缓慢。
-</h3>
-
-<br />
-<br />
-<br />
-
 
    4. 大幅低开后，没有立刻反弹，而是一直震荡超过40分钟，然后直线上涨，第一分钟和第二分钟幅度很大。
 <br />
