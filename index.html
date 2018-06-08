@@ -3,7 +3,6 @@
 <script>
 function calc(form) {
 
-var prev_open = document.getElementById("prev_open").value;
 var prev_close = document.getElementById("prev_close").value;
 var prev_change = document.getElementById("prev_change").value;
 var prev_high = document.getElementById("prev_high").value;
@@ -33,10 +32,13 @@ if (D > 0.6) {
 return false;
 }
 </script>
+<iframe src="https://www.widgets.investing.com/live-indices?theme=darkTheme&pairs=166" width="100%" height="100%" frameborder="0" allowtransparency="true" marginwidth="0" marginheight="0"></iframe><div class="poweredBy" style="font-family: Arial, Helvetica, sans-serif;">Powered by <a href="https://www.investing.com?utm_source=WMT&amp;utm_medium=referral&amp;utm_campaign=LIVE_INDICES&amp;utm_content=Footer%20Link" target="_blank" rel="nofollow">Investing.com</a></div>
+<br />
+<br />
+
 <body>
 <h1 style="color:Tomato;">前一天的情况</h1>
 
-开盘: <input type="text" id="prev_open"  size="8" value="2721"/>
 收盘: <input type="text" id="prev_close"  size="8" value="2734"/>
 变动: <input type="text" id="prev_change"  size="8" value="29"/>
 最高点: <input type="text" id="prev_high"  size="8" value="2736"/>
@@ -49,6 +51,11 @@ return false;
 </p>
 =========================================================================================
 <h1 style="color:DodgerBlue;"><em>操作规则:</em></h1>
+
+-3. 对比较有把握的走势，应该加大购买数量。而不是错了以后不断摊平成本。最后购买量变得很大而损失惨重。
+<br />
+<br />
+
 -2. 陷阱大跌要有加仓三次的思想准备。第一次的判断错误。但是方向正确，只是太早了。第二次判断对了。
 但是因为上涨的过程不是那么顺利。中间期权会贬值。这时应该继续加仓，只要确认自己是对的。
 <br />
@@ -171,11 +178,25 @@ return false;
 <br />
 <br />
 
+
+<h2 style="color:DodgerBlue;"><em>大跌时候，底部特征:</em></h2>
+<a href="#accelerate_bottom">加速下跌见底</a> 
+<br />
+<br />
+<a href="#double_bottom">双底走势</a> 
+<br />
+<br />
+
+
 <h2 style="color:DodgerBlue;"><em>冲高下跌走势的变化:</em></h2>
 <a href="#rise_and_drop">冲高大跌走势</a> 
 <br />
 <br />
 <a href="#open_flat_rise_drop">开盘震荡冲高大跌走势</a> 
+<br />
+<br />
+
+<a href="#rebound_and_drop_again">冲高下跌反弹后，再次下跌走势</a> 
 <br />
 <br />
 
@@ -201,9 +222,6 @@ return false;
 <br />
 <br />
 <a href="#small_trap_small_rise">小型陷阱大涨加小型冲高走低</a> 
-<br />
-<br />
-<a href="#bottom_of_drop">大跌时候，底部特征</a> 
 <br />
 <br />
 
@@ -235,9 +253,6 @@ return false;
 <br />
 <br />
 
-<a href="#bottom_of_drop">大跌时候，底部特征</a> 
-<br />
-<br />
 <h2 style="color:DodgerBlue;"><em>陷阱大涨走势:</em></h2>
 <a href="#trap_rise">陷阱大涨</a> 
 <br />
@@ -826,6 +841,18 @@ return false;
 <br />
 <br />
 
+<a name="rebound_and_drop_again"></a> 
+<h1 style="background-color:DodgerBlue;"><em>冲高下跌反弹后，再次下跌走势  </em></h1>
+1. 冲高大跌，跌了之后，从底部迅速反弹。这个有两个可能。反弹后继续下跌。还有就是反弹前是底部。
+这个要看反弹前是否有加速。不是说从底部尖锐反弹就是底部了。
+<br />
+<br />
+     <img src="double_bottom.PNG" alt=" drop and shak and drop huge" width="1000" height="700">
+<h3 style="color:MediumSeaGreen;">图示：10：10分左右大跌后，立刻反弹。但是可以看到它在反弹前
+跌势还不如它开始跌更厉害。这样反弹就只是一个休息。后面才是真的大跌。
+
+double_bottom
+
 <a name="failed_rise_drop_reversal"></a> 
 <h1 style="background-color:DodgerBlue;"><em>失败的冲高大跌反手做多走势  </em></h1>
 1. 这个走势发生在开盘或者盘中。不会发生在最后一个小时。如果最后一个小时发生这个走势，
@@ -1322,55 +1349,72 @@ C.  下跌后，也可能是真实下跌，也可能是陷阱大跌
 </b>
 <br />
 
-<a name="bottom_of_drop"></a> 
-<h2 style="background-color:DodgerBlue;"> <em>大跌时候底部特征 </em> </h2>
-<b> 1. 这个是指比较长时间的跌，包括冲高大跌，一般的低开后大跌。
-    如果已经做空，找到底部有利利润最大化。如果打算做反弹，抓住底部有利用抓住最低点。
+<a name="double_bottom"></a> 
+<h2 style="background-color:DodgerBlue;"> <em>双底走势 </em> </h2>
+<b> 1. 这个是指比较长时间的跌，包括冲高大跌，一般的低开后大跌。在长时间下跌的时候，大盘跌起来
+似乎看不到尽头。反弹都不大。然后在低点某个点。出现比较大幅度的反弹。说明大盘到了底部。
+这时经常会再次探底。可能和前面低点一样。也可能比前面低点要低几个点。这时不要贪婪。应该先买到再说。
+要记住反弹要明显大于前面的反弹。而前面的反弹都很弱。
 <br />
 <br />
-    2. 下跌后，反弹很小，或者反弹时间很短，或者走平时间很短，到了一个点后，没有明显的迹象，开始反弹。
-反弹后，可能走平很久，也可能立刻，再次下跌，这个低点要比前面反弹的低点低3，5个点，这个就是底部了。如果
-有前一天配合，就可以做多了。下跌的幅度有时很大，有时不大，这个取决于市场的情绪。
+    2. 双底不是总是出现。如果在底部反弹很急。出现两个台阶。每个台阶都涨幅比较大。那么下来的可能很大。
+而且如果反弹前没有明显的加速动作。那么也会出现双底。而出现加速，就不会有双底了。
 <br />
 <br />
-    3. 先从高点下跌，下跌10，20几分钟后，反弹一些，然后突然一条红线，
-         幅度比较大，但是持续只有1分钟, 这个就是底部了。可以等2，3分钟，做多
+	3. 如果不能确定大盘会双底，可以先做多call，等大盘反弹一定程度后，可以用期货做空对冲，可以在看到大盘
+不会再下来的时候，平仓期货，或者一起平仓。
 <br />
 <br />
-    4。只要不是下跌的第一阶段，那么一旦出现加速下跌后，就等2，3分钟就可以做多了  
 
  <img src="bottom_of_long_time_drop.PNG" alt="rise and drop" width="1000" height="700">
 <h3 style="color:MediumSeaGreen;">图示：在12：10回调结束后，继续大跌，这个一开始就跌幅很大，
 可以作为一个见底的参考，但是它在底部反弹的时候，也就是12：33的时候，第一分钟反弹就很大，这个说明反弹不成熟。
 反弹后，大盘继续走平了很久，再次下挫，这次更低，这样完成了双底，后面再也没有比这个更低的点了。
 </h3>
-    5. 下跌后，中间有一些走平，然后再次下跌。在某次走平时候，大盘加速下跌，这时在某个底部反弹，这时可以观察
-它的底部的样子，如果缓慢反弹，那么就是真的底部，如果迅速反弹，但是很快又下来一下，虽然比前面的低点要高，
-这个也可以看作是真实的大底。但是如果很快下来，又很快上去，那么可能未来还有更低的点。形成2的双底
+
+ <img src="double_bottom.PNG" alt="rise and drop" width="1000" height="700">
+<h3 style="color:MediumSeaGreen;">图示：1:40出现第一个低，迅速反弹。反弹分为两个台阶。都比较急。然后出现双底。
+</h3>
+
+</b>
+
+
+<a name="accelerate_bottom"></a> 
+<h2 style="background-color:DodgerBlue;"> <em>加速下跌见底 </em> </h2>
+<b> 1. 这个长短时间下跌都有可能。
+<br />
+<br />
+    2. 先从高点下跌，下跌10，20几分钟后，反弹一些，然后突然一条红线，
+         幅度比较大，但是持续只有1分钟, 这个就是底部了。可以等2，3分钟，做多
+<br />
+<br />
+    3。只要不是下跌的第一阶段，那么一旦出现加速下跌后，就等2，3分钟就可以做多了  
 <br />
 <br />
 
-<img src="single_bottom.PNG" alt="rise and drop" width="1000" height="700">
-<h3 style="color:MediumSeaGreen;">图示：大盘在11：00调整结束后，加速下跌，形成底部，在底部立刻反弹，但是过了几分钟
-再次下来，但是没有到达低点就反弹了。这个就确认前面就是最低点了。
-</h3>
-     6. 目前观察，在真实的底部有几个形式：
+    4. 下跌后，中间有一些走平，然后再次下跌。在某次走平时候，大盘加速下跌，这时在某个底部反弹，这时可以观察
+它的底部的样子，如果缓慢反弹，那么就是真的底部，如果迅速反弹，但是很快又下来一下，虽然比前面的低点要高，
+这个也可以看作是真实的大底。但是如果很快下来，又很快上去，那么可能未来还有更低的点。形成双底
+<br />
+<br />
+     5. 目前观察，在真实的底部有几个形式：
 <br />
          A。迅速下跌后，在底部停留几分钟，缓慢反弹，后面加速反弹。
 <br />
          B。迅速下跌后，迅速反弹，反弹一定幅度后，在10分钟内，突然再次回头，但是最低点比上次高。
 <br />
 <br />
+
+
+<img src="single_bottom.PNG" alt="rise and drop" width="1000" height="700">
+<h3 style="color:MediumSeaGreen;">图示：大盘在11：00调整结束后，加速下跌，形成底部，在底部立刻反弹，但是过了几分钟
+再次下来，但是没有到达低点就反弹了。这个就确认前面就是最低点了。
+</h3>
 <img src="trap_drop_rise_drop.PNG" alt="oscilate_trap" width="1000" height="700">
 <h3 style="color:MediumSeaGreen;">图示：在12：40分钟出现加速下跌，好像是要反弹到底了。结果大盘没有反弹。
 而是在低点徘徊超过30分钟，中间还有更低的点，这个说明要跌。这种情况应该先做多，但是如果超过30分钟没有反弹
 那么就当震荡走势来做了。走低震荡走势中，如果有比开始走低点更低的点，那么震荡结束后，会大跌。
 </h3>
-
-	7. 一般来说，底部2前面跌的比较急，而走势1前面跌的比较缓，但是如果不能确定，但是需要做多，而这个底部发生在早盘或者
-盘中，估计会大幅反弹的时候，可以先做多call，等大盘反弹一定程度后，可以用期货做空对冲，如果它走2，那么期货会赚钱，在底部
-cover。然后大盘反弹时候，call也会赚钱。如果大盘直接上去，也没有关系， 期货对冲也就是少赚一些，可以在看到大盘
-不会再下来的时候，平仓期货，或者一起平仓。
 
 <br />
 <br />
