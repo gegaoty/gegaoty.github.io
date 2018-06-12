@@ -56,6 +56,11 @@ return false;
 </p>
 =========================================================================================
 <h1 style="color:DodgerBlue;"><em>操作规则:</em></h1>
+-5. 一个模式要考虑它的失败的样子，另外时时刻刻都要考虑相反的走势是否可能。如果在最后时刻，可以买期权做保护。
+那时已经很便宜了。
+<br />
+<br />
+
 -4. 大盘快速反弹或者上涨的时候，如果打算做空或者卖掉手里的长仓。应该等它停止2，3分钟后再做。特别是反弹后做空。
 有时候会演变成失败走势。我吃过很多次这样的亏。损失惨重。
 <br />
@@ -217,6 +222,10 @@ return false;
 <br />
 <br />
 
+<a href="#mini_state">容易错判成陷阱大跌的冲高大跌的走势</a> 
+<br />
+<br />
+
 <a href="#fake_rise_drop_actual_trap_drop">容易错判成冲高大跌的陷阱大跌走势</a> 
 <br />
 <br />
@@ -240,9 +249,6 @@ return false;
 
 <h2 style="color:DodgerBlue;"><em>陷阱大跌走势:</em></h2>
 <a href="#trap_drop">陷阱大跌</a> 
-<br />
-<br />
-<a href="#mini_state">小型陷阱大跌</a> 
 <br />
 <br />
 
@@ -502,18 +508,17 @@ return false;
 这时做多也不晚。
 </h3>
 
-
 <a name="mini_state"></a> 
-<h1 style="background-color:DodgerBlue;"><em>小型陷阱大跌 </em></h1>
+<h1 style="background-color:DodgerBlue;"><em>容易错判成陷阱大跌的冲高大跌的走势 </em></h1>
 <b>
- 1. 类似陷阱大跌，但是时间很短。上升和下降都不到5分钟。这样仍然会走出陷阱大跌，但是持续时间很短。
-而且幅度也比较小。要见好就收。或者不用期权，而用ES。
+ 1. 类似陷阱大跌，但是时间很短。上升和下降都不到5分钟。这样其实只能算震荡，然后它明显走高。形成冲高大跌。
 <br />
 <br />
 <img src="mini_trap_drop.PNG" alt="oscilate_trap" width="1000" height="700">
-<h3 style="color:MediumSeaGreen;">图示：开盘就震荡，这个表示可能是陷阱大跌，果然走低，但是时间只有3分钟。
-立刻走高，时间也很短，然后走平。后面它只涨了不到10个点。时间也只有30分钟。
+<h3 style="color:MediumSeaGreen;">图示：类似陷阱大跌，但是时间很短。上升和下降都不到5分钟。
+这样其实只能算震荡，然后它明显走高。形成冲高大跌。
 </h3>
+
 
 <a name="triangle_state"></a> 
 <h1 style="background-color:DodgerBlue;"><em>辅助走势之三角验证走势 </em></h1>
@@ -744,8 +749,11 @@ return false;
 <h3 style="color:MediumSeaGreen;">图示：前一天处在中间，没有趋势。说明不是很强。12：30创新高后，
 。它一个是走平时间太长了。中间走平的时候，还涨了一些。但是涨幅不大。这种属于浪费多方力量的走势。
 最后虽然冲高了。但是幅度不大。如果做多SPX2780的call。那么当天会全部作废。
-
 </h3>
+
+     <img src="failed_failed_rise_drop_mode.PNG" alt=" drop and shak and drop huge" width="1000" height="700">
+<h3 style="color:MediumSeaGreen;">图示：11:40冲高后，它没有走平，而是缓慢向上。这说明多方的能量被浪费了。
+最后没有冲高。
 
 <a name="last_10_mins"></a> 
 <h1 style="background-color:DodgerBlue;"><em>全力以赴最后10分钟交易方法 </em></h1>
@@ -899,6 +907,12 @@ double_bottom
 
 <a name="failed_rise_drop_reversal"></a> 
 <h1 style="background-color:DodgerBlue;"><em>失败的冲高大跌反手做多走势  </em></h1>
+0. 这个走势判断的关键在于反弹后，再下来的时候不能比大跌的低点更低，不但不能低，而且要远远高于低点，
+如果低了或者接近，这个走势就失败了。
+从高点算起，如果40分钟内仍然在高点徘徊，那么就是这个走势，否则就不是这个走势。实在不行，要它走低后创新高再做
+<br />
+<br />
+
 1. 这个走势发生在开盘或者盘中。不会发生在最后一个小时。如果最后一个小时发生这个走势，
 那么就是真的冲高大跌。一旦发生，应该在低点割肉空仓。然后大量做多。
 <br />
@@ -926,6 +940,12 @@ double_bottom
 <h3 style="color:MediumSeaGreen;">图示：开盘震荡，10点后，冲高，然后大跌。跌幅不大，它立刻大幅冲高。
 回到冲高高点。这个说明走势错了。它会再次下来一些。而且时间很久，可以用30分钟来判断。
 在11：30分。它到达低点。然后大幅反弹。
+
+
+     <img src="failed_failed_rise_drop_mode.PNG" alt=" drop and shak and drop huge" width="1000" height="700">
+<h3 style="color:MediumSeaGreen;">图示：12：50附近，开始出现冲高大跌，反弹，创新高。似乎是这个走势，
+然而在高点后不到40分钟它回到低点，后面还低于低点，那么就不是这个走势。另外这个走低实在是太小了。
+应该是有4个点。
 
 <a name="open_flat_rise_drop"></a> 
 <h1 style="background-color:DodgerBlue;"><em>开盘震荡冲高大跌走势 </em></h1>
@@ -972,17 +992,8 @@ double_bottom
 <a name="rise_and_pull_back"></a> 
 <h1 style="background-color:DodgerBlue;"><em>高点拉回走势 </em></h1>
 <b>
-0. 判断是否最后要反弹，高点拉回后的幅度很重要，第一次高点拉回后
-    拉回的幅度应该超过主升幅的一半以上，显得要跌回去的样子，这样最后才会大涨
-    而且在最后主升幅开始以前，如果又震荡，不会比前面高点高，
-    一个相反的情况是，大涨创新高后，回调幅度不大，反弹，再次创新高，
-    但是新高幅度比前面新高稍微高一些，再次下来，形成震荡，这样最后不会冲高
-<br />
-<br />
-1. 这个和冲高大跌模式有矛盾。关键在于时间，如果过了一个小时，大盘没有反弹意思，而是离开高点很远。
-那么就是冲高大跌。而如果大盘下跌后，很快就回到高点附近，那么就是要继续大涨的样子。应该做多。
-如果能用其他条件，例如幅度，前一天或者前几天的走势，来判断，就更加准确了。
-
+0. 高点拉回还是冲高大跌，和前面的铺垫关系很大，如果前面上涨非常稳健，总是走平很久后上涨，或者冲力很强，或者
+从一个很低的点上来，非常有力量，那么就会走出高点拉回，否则就变成了冲高大跌。
 <br />
 <br />
      <img src="pull_back_and_rise.PNG" alt=" drop and shak and drop huge" width="1000" height="700">
