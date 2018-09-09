@@ -58,9 +58,8 @@ return false;
 =========================================================================================
 <h1 style="color:DodgerBlue;"><em>让我赔钱最厉害的做法:</em></h1>
 <h2 style="color:Red;"><em>
-1.  下跌时候出现长的下影线的时候，立刻买入，试图抄最低点，殊不知，真的跌势不会一下到底的，有充足的时间来
-操作，想依靠这个赚一个，半个点，就是一种短期投机。也许可以赚0.5个点，而潜在的损失是非常大的。一定要等到真的底部
-才做。
+1.  主要走势一开始就速度很高，特别是下跌时候出现长的下影线，让我觉得这个走势难以维持。事实上，主要走势
+即使开始速度很高，也可以维持很久。
 <br />
 <br />
 2. 没有等够时间，就直接抄底。一个真的底部，是需要时间来反转的，不会一下就反转，所以一定要足够的时间，比如10分钟。
@@ -162,6 +161,7 @@ return false;
 <a href="#when_to_use_option"><h1 style="color:DodgerBlue;"><em>使用期权的时机:</em></h1></a>
 <a href="#rule_to_short"><h1 style="color:DodgerBlue;"><em>做空的规则:</em></h1></a>
 <a href="#rise_flat_shape"><h1 style="color:DodgerBlue;"><em>冲高走平时候顶部形状决定以后走势:</em></h1></a>
+<a href="#fast_initial_move"><h1 style="color:DodgerBlue;"><em>主要走势一开始就速度很高:</em></h1></a>
 <br />
 <br />
 
@@ -183,7 +183,7 @@ return false;
 <a href="#continue_rise">连续大涨走势</a> 
 <br />
 
-<h1 style="color:Tomato;">开盘30分钟以内</h1>
+<h1 style="color:Tomato;">开盘30分钟形成的主要走势</h1>
 
 0. <a href="#open_flat">开盘后一直走平。</a> 
 <br />
@@ -198,48 +198,35 @@ return false;
 3. 大幅高开后冲高，如果达到幅度做空模式，那么在下跌2个点以后做空。
 <br />
 <br />
-4. 用强力预测走势第一条判断处于跌势，高开5个点以上，
-                      高开冲高，等它停止5分钟后，可以用对冲交易方法来做空
-<br />
-<br />
-5. 早熟走势中，前一天大涨，第二天应该到1个小时以后再涨，
-             如果30分钟以内就涨，那么可以做空，这个应该用对冲交易方法
-<br />
-<br />
-6. 开盘的第三，四分钟可能出现冲高大跌或者陷阱大跌走势，这个走势基本就是冲高一分钟，就下跌。
-或者大跌一分钟，就冲高。冲高和大跌的幅度应该明显超过前面几分钟的震荡，幅度应该是3倍的关系，否则就不是。
-不要滥用。这个模式的失败应该是大盘短期内再次运动超过这条线的顶部或底部。可以等3分钟。看它开始缓慢的反向运动后，
-用ES做多/做空。如果发现模式失败，应该割肉后，反向操作。一旦确认，
-这样的走势应该按照真的冲高大跌和陷阱大跌后的大涨来操作。如果没有明显的
-见顶或者见底的样子，就不能反向操作，而是要在回调的时候顺势操作。
+4. <a href="#open_low_trap_drop_and_rise">前几天下跌，当天较大幅度低开后，开盘1，2分钟后，
+出现一根大幅度的下影线。这个会触发大涨的主要走势</a> 
 <br />
 <br />
 
-7. <a href="#open_fall_rise">开盘后走低反弹走势</a> 
+5. <a href="#open_fall_rise">开盘后走低反弹走势</a> 
 <br />
 <br />
-8. <a href="#whole_day_reversal">开盘后冲高大跌走势下跌速度很大而反转，可以看作是陷阱大跌</a> 
-<br />
-<br />
-
-9. <a href="#open_3_min_rise_drop">开盘后3分钟冲高大跌走势，跌势缓慢，不会反转，持续下跌</a> 
+6. <a href="#whole_day_reversal">开盘后冲高大跌走势下跌速度很大而反转，可以看作是陷阱大跌</a> 
 <br />
 <br />
 
-10 .<a href="#triangle_state">开盘后三角验证走势，要记住，一定是一开盘就下跌，要看到它下降和上升的每一分钟的斜率</a> 
+7. <a href="#open_3_min_rise_drop">开盘后3分钟冲高一分钟，然后大跌，跌势缓慢，</a> 
 <br />
 <br />
-11 .<a href="#two_stage_bottom">开盘后出现两段下跌见底走势</a> 
+
+8 .<a href="#triangle_state">开盘后三角验证走势，要记住，一定是一开盘就下跌，要看到它下降和上升的每一分钟的斜率</a> 
 <br />
 <br />
-12. 用强力预测走势第一条判断处于升势，低开10个点以上，
-                      开盘3分钟如果先走低，可以用对冲交易方法来做多
+9 .<a href="#two_stage_bottom">开盘后出现两段下跌见底走势</a> 
 <br />
 <br />
-13 .<a href="#how_to_predict_after_open_rise">开盘后冲高，如何判断是继续冲高，还是冲高后大跌</a> 
+10 .<a href="#how_to_predict_after_open_rise">开盘后冲高，如何判断是继续冲高，还是冲高后大跌</a> 
 <br />
 <br />
-14. <a href="#mini_5_wave_accelerate">开盘后，立刻出现小5浪走势后，加速上涨</a> 
+11. <a href="#mini_5_wave_accelerate">开盘后，缓慢上升，超过20分钟，出现小5浪走势后，加速上涨</a> 
+<br />
+<br />
+12 <a href="#open_slow_drop_and_stay"> 开盘后，缓慢下跌，时间超过20分钟，加速大跌</a>
 <br />
 <br />
 
@@ -631,6 +618,8 @@ a。跌势的开始：
 6. <a href="#uneven_two_stage_rebound">不平衡两段下跌</a> 
 <br />
 7. <a href="#30_min_slow_drop">30分钟缓慢下跌</a> 
+<br />
+8. <a href="#flat_after_drop_from_high">从高位下跌后走平，如何判断是回调后再涨，还是会真的下跌</a> 
 </em></h2>
 
 
@@ -1522,6 +1511,24 @@ b。 如果一下子就冲高很多，那么很可能立刻反转，大跌。幅
 </h3>
 
 
+<a name="open_low_trap_drop_and_rise"></a> 
+<h1 style="background-color:DodgerBlue;"><em>前几天下跌，当天较大幅度低开后，开盘1，2分钟后， 
+                                       出现较大幅度的下影线。这个会触发大涨的主要走势  </em></h1>
+<br />
+<br />
+1. 这个走势有两种可能，一种是慢慢上涨，这个很有可能导致一天都在涨，或者涨上去后形成尴尬走势。
+<br />
+<br />
+2. 它还可能，一开始就开始快速上涨。即使如此。它也能维持很长时间涨势。不能轻易做空。
+<br />
+<br />
+     <img src="open_low_trap_drop_rise.PNG" alt=" small oscilate_trap" width="1000" height="700">
+<br />
+<h3 style="color:MediumSeaGreen;">图示：低开了10点，而前几天连续下跌。所以这个低开本身就又一定的动力。
+但是不一定就涨。而它开盘2分钟后，就出现一条4个点的下影线，然后开始快速涨。开始有比较大的回调。
+后面涨幅很大。如果要做空，应该等一个小时以后，如果已经做多，应该紧紧拿着，这个是个主要走势。
+</h3>
+
 
 
 <a name="open_rise_and_flat"></a> 
@@ -1630,6 +1637,17 @@ b。 如果一下子就冲高很多，那么很可能立刻反转，大跌。幅
 所以上升结束。
 </h3>
 
+<a name="open_slow_drop_and_stay"></a> 
+<h1 style="background-color:DodgerBlue;"><em>开盘后，缓慢下跌，超过20分钟后，大跌 </em></h1>
+1. 。
+<br />
+<br />
+     <img src="double_top.PNG" alt="rise and drop" width="1000" height="700">
+<br />
+      <h3 style="color:MediumSeaGreen;">图示:10：
+</h3>
+
+
 <a name="mini_5_wave_accelerate"></a> 
 <h1 style="background-color:DodgerBlue;"><em>小型5浪发生后，加速上涨 </em></h1>
 1. 这个5浪发生在刚刚开始上涨的时候，所以它的回调只会让它上涨更快。它的回调常常只有一个bar，然后立刻快速上涨。
@@ -1664,7 +1682,9 @@ b。 如果一下子就冲高很多，那么很可能立刻反转，大跌。幅
 
      <img src="double_top.PNG" alt="rise and drop" width="1000" height="700">
 <br />
-      <h3 style="color:MediumSeaGreen;">图示:
+      <h3 style="color:MediumSeaGreen;">图示:10：40出现上升的第一浪，这个上升趋势不是很明显。但是它不断的缓慢
+上升，在11：45分，出现加速上涨。这个让做多的人高兴。结果就是最高点。这个的下跌非常的陡峭，所以，它后面2：15分钟
+再次反弹回接近高点。
 </h3>
 
 <a name="weak_1st_wave"></a> 
@@ -1808,6 +1828,30 @@ b。 如果一下子就冲高很多，那么很可能立刻反转，大跌。幅
 <br />
 <br />
 
+
+
+
+<a name="fast_initial_move"></a> 
+<h1 style="background-color:DodgerBlue;"><em>主要走势一开始就速度很高 </em></h1>
+<b>
+ 1. 主要走势一开始就速度很高，这个不代表就是走势没力量，或者走势很快就结束。仍然要等一个小时以上，
+然后看它的走势如何才能决定。
+</b>
+<br />
+<br />
+
+     <img src="open_low_trap_drop_rise.PNG" alt=" two stage drop" width="1000" height="700">
+<br />
+<h3 style="color:MediumSeaGreen;">图示：刚刚开盘后，大盘在第二分钟出现大幅下跌后，开始主要走势。
+它一开始就非常快速，过几分钟更加飞快。和那种慢慢坚实上涨不同。然而。它仍然坚持了超过一个多小时，
+才开始大跌。
+</h3>
+
+     <img src="fast_intial_drop.PNG" alt=" two stage drop" width="1000" height="700">
+<br />
+<h3 style="color:MediumSeaGreen;">图示：一开盘出现冲高大跌走势，它的跌速一开始就很大，然后走平几分钟。
+这个似乎象到底。然而这个是主要走势的刚刚开始，不会那么快，一定要等一个小时以上，然后看它的走势才能做多。
+</h3>
 
 <a name="rise_flat_shape"></a> 
 <h1 style="background-color:DodgerBlue;"><em>冲高走平时候顶部形状决定以后走势 </em></h1>
@@ -3347,7 +3391,21 @@ C.  下跌后，也可能是真实下跌，也可能是陷阱大跌
 这样就暂时到了底部。
 </h3>
 
-
+<a name="flat_after_drop_from_high"></a> 
+<h2 style="background-color:DodgerBlue;"> <em>从高位下跌后走平，如何判断是回调后再涨，还是会真的下跌 </em> </h2>
+1.关键在于时间，这个一定等够时间，否则容易错过机会。如果已经做空。大盘下跌后，走平。应该等至少20分钟，
+如果大盘仍然在附近徘徊，那么可能会反弹。可以关掉空仓。真的下跌不会等这么久，一般不到10分钟就继续大跌了。
+<br />
+<img src="open_low_trap_drop_rise.PNG" alt="rise and drop" width="1000" height="700">
+<h3 style="color:MediumSeaGreen;">图示：大盘开始下跌后，在12：00附近走平，然后只有10分钟不到，就大跌。所以一定要等一会
+才能判断。不要一看到大盘走平就害怕以为到了头。
+</h3>
+<br />
+<br />
+<img src="uneven_drop.PNG" alt="rise and drop" width="1000" height="700">
+<h3 style="color:MediumSeaGreen;">图示：11:10下跌后，走平了10分钟后，继续下跌。而11：30分，这里停留了超过40分钟。
+这个最后反弹了。2：10分在附近徘徊了不到10分钟就继续大跌。所以时间在这里非常重要。
+</h3>
 
 <a name="30_min_slow_drop"></a> 
 <h2 style="background-color:DodgerBlue;"> <em>30分钟缓慢下跌 </em> </h2>
