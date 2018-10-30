@@ -81,11 +81,24 @@ return false;
 <h1 style="color:Blue;"><em> 很多失败都是贪婪导致的，比如严重的损失，是重仓的结果，比如错过机会，是想有更好的位置。
 或者想贪一些小便宜
 </em></h1></a>
+=========================================================================================
+<h1 style="color:Magenta;"><em>熊市中交易策略</em></h1>
+<h1 style="color:Red;"><em>1.  应该用期权交易，如果没有把握看到大盘是转势还是没有，那么应该两边下注。
+但是即使两边下注，也应该尽量找最好的位置。而不是同时做。</em></h1></a>
+
+<h1 style="color:Red;"><em>2.  要接受自己的不完美，不必把每个高点和低点走做了，而是关注主要走势。</em></h1></a>
 
 =========================================================================================
 <h1 style="color:Red;"><em> 一旦认定一个走势，那么不要看账户，而是光看走势。觉得反转了再操作。不要时时刻刻
 去看赚了多少钱。当然这个不是放任不管，看到临时的底或者顶，也要及时操作。这个不是懒惰的借口。
 </em></h1></a>
+=========================================================================================
+<h1 style="color:Magenta;"><em>熊市中的隔日交易策略</em></h1>
+<h1 style="color:Red;"><em>1.  大跌后，大涨一天，收盘前，设法做空，拿到第二天。
+只要不是连续大涨走势，第二天大幅低开可能很大。连续大涨走势，只有在大规模反转才可能，一般的情况是
+大跌一天，大涨一天，反复执行。</em></h1></a>
+
+<h1 style="color:Red;"><em>2.  低开40点，或者50点以上，在半夜做多，会又一定的反弹</em></h1></a>
 
 =========================================================================================
 <h1 style="color:Magenta;"><em>跌势中反弹很快，很容易诱惑人去做多；涨势中回调很快，也很容易诱惑人做空。这样都是错的行为</em></h1>
@@ -168,12 +181,15 @@ return false;
 =========================================================================================
 <h1 style="color:DodgerBlue;"><em>判断趋势是否反转:</em></h1>
 <h2 style="color:Red;"><em>
-1. 幅度：幅度最为重要，幅度是否足够大，幅度要成比例，不间断的上涨或者下跌的幅度最为重要。
-如果在盘中，可以用前面的走势来判断。
+0. 不是所有的趋势都会反转的，如果发现不是很对，那么就等待直到明确也不晚。
 <br />
 <br />
 
-2. 时间：是否运动足够的时间。不同的走势，时间也不一样。
+1.幅度不重要，有时候幅度很小，但是也出现了转向。
+<br />
+<br />
+
+2. 时间很重要，一定是，运动，调整，再运动，这样就转向了。
 <br />
 <br />
 3. 加速：末端加速要和走势匹配，不能太小，主要走势的加速不能是2，3个bar就结束了。
@@ -382,35 +398,38 @@ return false;
 9. <a href="#open_double_bot">开盘后，走低，形成双底后，创新高，缓慢上升</a> 
 <br />
 <br />
+10 .<a href="#two_stage_bottom">开盘后出现两段下跌见底走势</a> 
+<br />
+<br />
 
 <h2 style="color:Red;"><em>
 开盘形成跌势
 </em></h2>
 
 
-9 .<a href="#two_stage_bottom">开盘后出现两段下跌见底走势</a> 
+2 .<a href="#how_to_predict_after_open_rise">开盘后徘徊几分钟后冲高，如何判断是继续冲高，还是冲高后大跌</a> 
 <br />
 <br />
-10 .<a href="#how_to_predict_after_open_rise">开盘后徘徊几分钟后冲高，如何判断是继续冲高，还是冲高后大跌</a> 
+3. <a href="#down_trend_with_new_high">开盘后，创新低，没有在底部形成坚实的基础，就创新高</a> 
 <br />
 <br />
-8. <a href="#down_trend_with_new_high">开盘后，创新低，没有在底部形成坚实的基础，就创新高</a> 
+4 <a href="#open_slow_drop_and_stay"> 开盘后，快速下跌后，小幅震荡10分钟以上，加速大跌</a>
 <br />
 <br />
-12 <a href="#open_slow_drop_and_stay"> 开盘后，快速下跌后，小幅震荡10分钟以上，加速大跌</a>
+5 <a href="#open_horizontal_5_wave"> 开盘后，出现横向5浪走势</a>
 <br />
 <br />
-13 <a href="#open_horizontal_5_wave"> 开盘后，出现横向5浪走势</a>
-<br />
-<br />
-14. <a href="#open_3_min_rise_drop">开盘后3分钟冲高一分钟，然后大跌，跌势缓慢，</a> 
+6. <a href="#open_3_min_rise_drop">开盘后3分钟冲高一分钟，然后大跌，跌势缓慢，</a> 
 <br />
 <br />
 
-15. <a href="#go_low_with_two_stages"> 开盘后下跌，出现不平衡两段下跌走势后反弹</a>
+7. <a href="#go_low_with_two_stages"> 开盘后下跌，出现不平衡两段下跌走势后反弹</a>
 <br />
 <br />
-16. <a href="#low_trend_with_rebound"> 开盘后下跌，跌不下去，反弹后大跌</a>
+8. <a href="#low_trend_with_rebound"> 开盘后下跌，跌不下去，反弹后大跌</a>
+<br />
+<br />
+9. <a href="#open_low_high"> 开盘后震荡，走低后，大幅冲高，创新高后震荡大跌</a>
 <br />
 <br />
 
@@ -1104,9 +1123,66 @@ a。跌势的开始：
 <h1 style="color:DodgerBlue;"><em><a href="#drop_rebound_to_lower_bound">下跌后，反弹的高点接近前面低点</a> </em></h1>
 <h1 style="color:DodgerBlue;"><em><a href="#rebound_from_bottom">熊市中从底部反弹的特点</a> </em></h1>
 <h1 style="color:DodgerBlue;"><em><a href="#open_very_low_and_drop">大幅低开后，出现跌势的走势</a> </em></h1>
+<h1 style="color:DodgerBlue;"><em><a href="#diff_betw_accel_drop">下跌时候，如何判断是加速下跌还是持续下跌</a> </em></h1>
 
 <h1 style="color:DodgerBlue;"><em><a href="#open_big_rise_decison">开盘大涨后，是要继续涨，还是要跌。</a> </em></h1>
 <h1 style="color:DodgerBlue;"><em><a href="#5wave_diff_during_trend">升势和跌势中的5浪上升走势的不同。</a> </em></h1>
+<h1 style="color:DodgerBlue;"><em><a href="#huge_rebound_with_no_sign">加速下跌后，突然大幅反弹走势</a> </em></h1>
+
+
+<a name="huge_rebound_with_no_sign"></a> 
+<h1 style="background-color:DodgerBlue;"><em>加速下跌后，突然大幅反弹走势: </em></h1>
+1. 有时大盘加速下跌后，突然大幅反弹，一分钟涨10个点。这时一定要克服心理障碍，追着买入。要么ES，要么期权。
+它会继续大涨。
+<br />
+<br />
+
+
+     <img src="steps_down_oscilate_drop.PNG" alt=" small oscilate_trap" width="1000" height="700">
+<br />
+<h3 style="color:MediumSeaGreen;">图示：3：30开始加速下跌。突然大幅反弹，这个表示会大幅反弹了。
+
+
+
+<a name="diff_betw_accel_drop"></a> 
+<h1 style="background-color:DodgerBlue;"><em>下跌时候，如何判断是加速下跌还是持续下跌: </em></h1>
+1. 这个区别很关键。加速下跌意味着见到底部，而持续，则会持续下跌。
+<br />
+<br />
+2. 关键首先判断下跌的开始。如果大盘横盘震荡很久，那么破位下跌后，算刚刚开始下跌。即使它已经在
+横盘以前已经跌过了。即使大跌，也是第一次跌。不是加速。
+<br />
+<br />
+3. 它如果冲高，然后下来后，没有或者很短时间，不超过5分钟在前面的低点停留，直接越过低点，
+那么就是持续下跌。如果在低点附近停留很久，超过10分钟，然后走低，那么就是加速走势。
+<br />
+<br />
+4. 如果大跌后，反弹，再次下来创新低，那么就是持续下跌。
+<br />
+<br />
+5. 如果大跌后，反弹，下来，再次反弹，形成双顶后，创新低，那么这个是走平后大跌，属于加速下跌。
+双顶的距离可能很长，超过1个小时，也可能很短。也超过15分钟。
+<br />
+<br />
+
+
+
+     <img src="steps_down_oscilate_drop.PNG" alt=" small oscilate_trap" width="1000" height="700">
+<br />
+<h3 style="color:MediumSeaGreen;">图示：11：40开始的大跌，虽然跌幅很大，但是它是冲高后，直接越过最低点。
+所以不是加速走势。从2：00开始的大跌。它是经过长达两个小时的震荡后，破位下跌。可想而知，这么长时间的。
+震荡，跌下来的威力很大。2；30分钟，它虽然停顿了一下。但是这个是震荡后，下跌刚刚开始。它震荡的点，
+也接近前面的下落点。3：10开始它经过大跌后，反弹出现双顶。要注意一定是双顶才算，如果是反弹后，
+直接创新低，那么不是加速下跌，而是持续下跌。再次下跌，这个才算加速下跌。
+<br />
+<br />
+
+     <img src="rebound_in_bear_mkt.PNG" alt=" small oscilate_trap" width="1000" height="700">
+<br />
+<h3 style="color:MediumSeaGreen;">图示：3：00开始，它总是下跌，稍微反弹后，创新低，再反弹，再创新低。
+没有双顶走势，这样表示持续下跌。
+<br />
+<br />
 
 
 <a name="5wave_diff_during_trend"></a> 
@@ -1184,6 +1260,15 @@ a。跌势的开始：
 反弹的高点仍然接近前面的低点，这样仍然不是加速下跌。直到11：00的大跌，这个才算。因为反弹的高点，
 远远低于前面的低点。同样发生在1：00开始的下跌。反弹高点接近前面的低点。这样就不是加速下跌。而是
 要继续下跌。
+<br />
+<br />
+
+     <img src="steps_down_oscilate_drop.PNG" alt="rise and drop" width="1000" height="700">
+<br />
+      <h3 style="color:MediumSeaGreen;">图示:10：30下跌后，反弹，然后在离前面高点不远的地方持续震荡。
+这个说明要跌，11：20下跌后，立刻反弹，反弹高点也接近前面的台阶的低点。11：50开始的下跌，幅度比较大，
+但是在底部还没有加速，就开始反弹，反弹高位也接近前面的低点。这些都说明了大盘会大跌。
+</h3>
 
 <a name="rebound_and_rising_day"></a> 
 <h1 style="background-color:DodgerBlue;"><em>对全天升势和下跌后反转升势的分析: </em></h1>
@@ -1371,6 +1456,7 @@ a。跌势的开始：
 </em></h3></a>
 <h1 style="color:DodgerBlue;"><em><a href="#low_oscilate_and_drop">熊市中，跌势下低位大幅震荡后大跌走势</a> </em></h1>
 <h1 style="color:DodgerBlue;"><em><a href="#high_oscilate_and_rise">熊市中，涨势下高位大幅震荡后大涨走势</a> </em></h1>
+<h1 style="color:DodgerBlue;"><em><a href="#drop_rebound_to_lower_bound">下跌后，反弹的高点接近前面低点</a> </em></h1>
 
 <a name="nightmare_experience"></a> 
 <h1 style="background-color:DodgerBlue;"><em>噩梦经历: </em></h1>
@@ -1832,6 +1918,22 @@ c. 如果冲高后，创新高后，立刻从高点下来，连续2分钟，然�
       <h3 style="color:MediumSeaGreen;">图示:9：50从底部上涨后，一下涨了10个点，然后走平，这个涨幅是比较大的，
 而且是从底部刚刚出来。所以它走平后，大幅回调，出现两段跌势，应该用ES和期权同时做多。
 </h3>
+
+
+
+
+ 
+<a name="open_low_high"></a> 
+<h1 style="background-color:DodgerBlue;"><em>开盘后震荡，走低后，大幅冲高，创新高后震荡大跌 </em></h1>
+1. 这个震荡，然后走低，然后创新高，好像是涨势，但是它后来的表现是跌势表现。
+<br />
+<br />
+     <img src="steps_down_oscilate_drop.PNG" alt="rise and drop" width="1000" height="700">
+<br />
+      <h3 style="color:MediumSeaGreen;">图示:开盘后一直震荡。然后走低，然后冲高，创新高。这个有可能处于升势，
+完全看后来的表现。它冲高后，一直在高位徘徊，很长时间。下跌后，跌幅很小。就开始震荡。
+</h3>
+
 
 
 <a name="low_trend_with_rebound"></a> 
