@@ -56,16 +56,16 @@ return false;
 </p>
 
 =========================================================================================
-<h1 style="color:Blue;"><em> 1. 对规则的使用：如果规则规定怎么做，而自己非常害怕这样做。要仔细思考，
-到底是自己的问题还是规则的问题，如果自己除了害怕以外，没有任何理由，那么应该做。
+<h1 style="color:Blue;"><em> 1. 如果对方向判断不清，不知道是否转向了。应该假设它没有转向。还是原来的方向。
 </em></h1></a>
-<h1 style="color:Blue;"><em> 2. 每一笔交易都要严肃的考虑它是升势还是跌势，或者处于更小的走势中。不能
+<h1 style="color:Blue;"><em> 2. 每一笔交易都考虑它是升势还是跌势，或者处于更小的走势中。不能
 想着捞一把，赚一个两个点。如果方向错误，市场连一个点都不给你。
 </em></h1></a>
 <h1 style="color:Blue;"><em> 3. 做多的时候，不要害怕，只要是抄底到了，就要紧紧拿住。
 </em></h1></a>
 <h1 style="color:Blue;"><em> 4. 如果市场总是给我机会反复操作赚钱。那么就不对。要仔细思考里面的原理。
-很可能做反方向了。
+很可能做反方向了。比如市场很快的上涨，然后慢慢下来。说明要大跌，突破原来低点。市场不会这么仁慈，给你送钱。同样发生在做空的时候。
+市场很快大跌，然后反弹，似乎要回到原位。实际上大涨。突破原来高点。
 </em></h1></a>
 
 =========================================================================================
@@ -328,11 +328,15 @@ return false;
 
 <a href="#bear_market_mode"><h1 style="color:DodgerBlue;"><em>熊市中的走势特点</em></h1></a>
 <a href="#rise_and_drop_pass"><h1 style="color:DodgerBlue;"><em>下跌的开始，冲高后，下跌时候，直接越过前面的冲高点</em></h1></a>
+<a href="#drop_and_shar_rebound"><h1 style="color:DodgerBlue;"><em>下跌的开始，下跌后，尖锐反弹，低于高点</em></h1></a>
 <a href="#drop_and_rise_pass"><h1 style="color:DodgerBlue;"><em>大涨的开始，从高点下跌后，直接冲高，冲过前面的下跌起点。</em></h1></a>
-<a href="#two_way_rising"><h1 style="color:DodgerBlue;"><em>升势或者反转到升势后，两种上涨的样子以及它们的后果</em></h1></a>
+<a href="#two_way_rising"><h1 style="color:DodgerBlue;"><em>升势或者反转到升势后，两种第一浪上涨的样子以及它们的后果</em></h1></a>
 <a href="#uneven_top_in_rising_mode"><h1 style="color:DodgerBlue;"><em>升势中加速上涨，出现的不平等双顶走势</em></h1></a>
 <a href="#long_time_oscilate_in_high"><h1 style="color:DodgerBlue;"><em>长时间高位震荡判断后续走势</em></h1></a>
 <a href="#continue_rise_after_rise"><h1 style="color:DodgerBlue;"><em>上涨时候，继续上涨的样子</em></h1></a>
+
+<a href="#first_wave_after_drop"><h1 style="color:DodgerBlue;"><em>下跌时候，只有第一波，反弹创新高后大跌</em></h1></a>
+<a href="#even_two_stage_rebound"><h1 style="color:DodgerBlue;"><em>两段下跌</em></h1></a>
 
 <a href="#typical_top"><h1 style="color:DodgerBlue;"><em>做空时候寻找顶部，典型的顶部形状</em></h1></a>
 <a href="#fake_bot_break"><h1 style="color:DodgerBlue;"><em>下跌时候，不断出现长阴线，形成底部后，却用短影线破坏底部 引发大跌
@@ -426,6 +430,9 @@ return false;
 开盘形成跌势
 </em></h2>
 
+1. <a href="#flat_and_up"> 开盘后走平，然后走高。下来一些，再次冲高。倾斜向上</a>
+<br />
+<br />
 
 2. <a href="#new_high_with_right_side_drop">开盘后，冲高，下来，出现右侧压制走势后大跌</a> 
 <br />
@@ -721,8 +728,6 @@ a。跌势的开始：
 要跌的时间不是那么确定。但是肯定会低于前面的低点。即使稍微低也算。
 <br />
 <br />
-    5. <a href="#even_two_stage_rebound">平衡两段下跌</a> 
-<br />
 6. <a href="#uneven_two_stage_rebound">不平衡两段下跌</a> 
 <br />
 7. <a href="#30_min_slow_drop">30分钟缓慢下跌</a> 
@@ -895,11 +900,6 @@ a。跌势的开始：
 <a href="#failed_rise_drop_reversal">小型冲高大跌反转走势</a> 
 <br />
 <br />
-
-<a href="#failed_chain_reaction">失败的链式反应</a> 
-<br />
-<br />
-
 
 <h2 style="color:DodgerBlue;"><em>距离很近的两段走势</em></h2>
 两段走势是5浪走势的简化。常常发生在大盘冲高或者下跌速度很快的时候，这样就出现两段走势。
@@ -2021,11 +2021,6 @@ c. 如果冲高后，创新高后，立刻从高点下来，连续2分钟，然�
 0. 这个会大幅回调后，继续大跌，可以等它回到原来高点，走平后，买put
 <br />
 <br />
-<img src="uneven_drop.PNG" alt="oscilate_trap" width="1000" height="700">
-<h3 style="color:MediumSeaGreen;">图示：11：30分钟出现临时底部，虽然出现双底，但是时间间隔很短。不能算真的的底部，
-但是它在底部运行很久，足以造成一个反弹。它的反弹最高点没有超过下跌的开始。也就是横向5浪的高点。它开始下跌后，
-第一段幅度不大。就反弹，只跌了两个点，这时应该紧紧拿着。它要么第二段暴跌，要么后面还要跌，至少会低于原来的底部。</h3>
-
 <img src="slow_drop_bottom_shape.PNG" alt="oscilate_trap" width="1000" height="700">
 <h3 style="color:MediumSeaGreen;">图示：</h3>
 
@@ -2061,7 +2056,17 @@ c. 如果冲高后，创新高后，立刻从高点下来，连续2分钟，然�
 </h3>
 
 
-
+<a name="flat_and_up"></a> 
+<h1 style="background-color:DodgerBlue;"><em>开盘后走平，然后走高。下来一些，再次冲高。倾斜向上  </em></h1>
+1. 走平冲高，就表示大跌了。
+<br />
+<br />
+     <img src="new_high_in_falling_trend.PNG" alt="rise and drop" width="1000" height="700">
+<br />
+      <h3 style="color:MediumSeaGreen;">图示:开盘后走平，冲高。稍微下来。再次冲高。似乎要走出5浪。
+然而，它冲高后，走平很久，超过15分钟。这时可以认为它冲高结束了。5浪是比较对称的。而且它一直向上，
+5浪不会是这个样子。
+</h3>
 
  
 <a name="open_low_high"></a> 
@@ -2218,6 +2223,27 @@ c. 如果冲高后，创新高后，立刻从高点下来，连续2分钟，然�
 </h3>
 
 
+<a name="first_wave_after_drop"></a> 
+<h1 style="background-color:DodgerBlue;"><em>下跌时候，只有第一波，反弹创新高后大跌 </em></h1>
+1. 下跌的时候，只有一波，然后反弹了创新高。这个走势和另外一个跌不下去，反弹创新高的走势类似。关键在于识别，
+它的开始下跌的样子。
+<br />
+<br />
+
+
+<img src="new_high_in_falling_trend.PNG" alt="oscilate_trap" width="1000" height="700">
+<h3 style="color:MediumSeaGreen;">图示：10：10下跌后，中间停留时间很短。然后继续大跌。所以这个只能算一浪。
+没有反转。然而这个底部在开盘的底部。具有很强的支撑。大盘反弹后，跌不下来。就冲高。甚至创新高。
+但是要记住，并没有转势。仍然是跌势。
+</h3>
+      <img src="new_high_before_drop.PNG" alt="rise and drop" width="1000" height="700">
+<br />
+      <h3 style="color:MediumSeaGreen;">图示：开盘后，创新低，下跌。形成跌势，然而它开始反弹。每次反弹
+回调很大。到11：30创新高。但是仍然是跌势。到12：00它出现底部反弹，越过底部的大跌走势。这个就是跌的开始。
+</h3>
+
+
+
 <a name="continue_rise_after_rise"></a> 
 <h1 style="background-color:DodgerBlue;"><em>上涨时候，继续上涨的样子 </em></h1>
 1. 这个在上涨的时候，经常出现。我上当很多次。一定要小心。有耐心。
@@ -2319,6 +2345,20 @@ c. 如果冲高后，创新高后，立刻从高点下来，连续2分钟，然�
 <br />
 
 
+<a name="drop_and_shar_rebound"></a> 
+<h1 style="background-color:DodgerBlue;"><em>下跌的开始，下跌后，尖锐反弹，低于高点 </em></h1>
+0.这个走势不是一个独立走势，它一定要么在跌势，要么处于升势中的小跌势。
+<br />
+<br />
+1. 它一旦尖锐反弹，根据情况的不同。做不同的操作。
+<br />
+<br />
+<img src="new_high_in_falling_trend.PNG" alt="oscilate_trap" width="1000" height="700">
+<h3 style="color:MediumSeaGreen;">图示：12：30出现尖锐反弹，它处于跌势。又在高点，所以看到这个反弹，
+可以在反弹停止后，做空。3：30分，它下跌后，尖锐反弹。这时要寻找底部。已经在底部附近了。
+所以它一定会比反弹的低点低。可以在这个低点下面放一个单子。
+</h3>
+
 
 <a name="rise_and_drop_pass"></a> 
 <h1 style="background-color:DodgerBlue;"><em>下跌的开始，冲高后，下跌时候，直接越过前面的冲高点 </em></h1>
@@ -2333,6 +2373,14 @@ c. 如果冲高后，创新高后，立刻从高点下来，连续2分钟，然�
 因为才跌了一点点。
 <br />
 <br />
+3. 如果越过低点后，很快跌下去，不要追。如果是真实的大跌，会反弹后走平。
+<br />
+<br />
+4. 从我的直觉操作上，它的底部不断反弹后，下来。我会不断买入卖出做多。结果最后一次买入后，它冲高后，我卖出。
+然后在原位放个单子等着。它却直接越过这个地方而大跌。
+<br />
+<br />
+
 
 
       <h3 style="color:Red;">开盘出现的情况</h3>
@@ -2373,6 +2421,11 @@ c. 如果冲高后，创新高后，立刻从高点下来，连续2分钟，然�
 <br />
 <br />
 
+<img src="trap_drop_rise_drop.PNG" alt="oscilate_trap" width="1000" height="700">
+<h3 style="color:MediumSeaGreen;">图示：这个似乎走出加速下跌。但是要看到12：10出现陷阱大涨，就是跌下来后，很短时间
+就开始涨，而且第一分钟涨幅比较大。这其实是一个新的跌势的开始。所以它在12：40虽然下跌速度很大，但是是第一段下跌。
+另外观察它的底部特点，1：20附近，出现了陷阱大涨，虽然幅度很小，但是在当时观察，还是比较大的。所以意味着要跌。
+</h3>
 
 <a name="typical_top"></a> 
 <h1 style="background-color:DodgerBlue;"><em>做空时候寻找顶部，典型的顶部形状 </em></h1>
@@ -3380,8 +3433,13 @@ c. 如果冲高后，创新高后，立刻从高点下来，连续2分钟，然�
 经典走势后，大跌。
 
      <img src="fed_rise_trend.PNG" alt=" drop and shak and drop huge" width="1000" height="700">
-<h3 style="color:MediumSeaGreen;">图示：
+<h3 style="color:MediumSeaGreen;">图示：它在宣布前一直处于升势，但是涨幅不大。联邦宣布后，大涨。
+属于加速上涨。这样就反转了。它在上涨前，先是小幅上涨。然后回来。这样宣布后，第一反应是上涨。</h3>
 
+     <img src="new_high_in_falling_trend.PNG" alt=" drop and shak and drop huge" width="1000" height="700">
+<h3 style="color:MediumSeaGreen;">图示：它在宣布前仍然处于跌势。在宣布后，大幅震荡。最后是冲高走平很久。
+这样仍然是跌势。如果忽略掉中间的大涨大跌，那么就是从底部一下子冲高很多，走平。这样的走势就是要跌的。
+就是升势也要跌。何况是跌势。</h3>
 
 <a name="rise_and_flat"></a> 
 <h1 style="background-color:DodgerBlue;"><em>冲高长时间走平后的继续走势:  </em></h1>
@@ -3390,21 +3448,6 @@ c. 如果冲高后，创新高后，立刻从高点下来，连续2分钟，然�
 这样的走平一般应该有两个台阶。然而只有一个。它在走平前，没有猛冲，这说明还能涨。
 1：20分附近。它稍微走高后，突然大跌。然后迅速反弹。这个就是调整了。如果它直接涨，会很困难。
 这样的调整，让它很有力量。</h3>
-
-
-
-<a name="failed_chain_reaction"></a> 
-<h1 style="background-color:DodgerBlue;"><em>失败的链式反应  </em></h1>
-
-<br />
-<br />
-     <img src="drop_and_shake_and_drop_huge_2.PNG" alt=" drop and shak and drop huge" width="1000" height="700">
-<br />
-<h3 style="color:MediumSeaGreen;">图示：开盘震荡后，冲高，只有3，4个点，走出双顶，它下来，创新低，反弹。
-如果这个反弹创新高，那么就是链式反应，如果没有，而是半路停下来，那么就是冲高大跌，应该及时做出反应。
-这个反弹很快就可以发现。链式反应，应该很快就创新高，然后缓慢回调，震荡。
-</h3>
-
 
 
 <a name="failed_rise_drop_reversal"></a> 
@@ -4577,20 +4620,25 @@ C.  下跌后，也可能是真实下跌，也可能是陷阱大跌
 
 
 <a name="even_two_stage_rebound"></a> 
-<h2 style="background-color:DodgerBlue;"> <em>平衡两段下跌 </em> </h2>
-中等速度下跌后，稍微反弹，或者走平。再次下跌。幅度和第一次差不多。
-那么这个因为走出两段走势，会反弹。 却决于第二段的速度，如果一分钟bar很大，
-那么就是真的底部。配合底部的各种走势。会大幅反弹，会是非常强的做多。
- 如果第二段速度和第一段差不多。那么它没有到底。这个只是跌太多休息一下。
-这个反弹后走出5浪，会更加暴跌。所以反弹后应该 买put。紧紧拿住。
+<h2 style="background-color:DodgerBlue;"> <em>两段下跌 </em> </h2>
+1. 两段下跌走势会建立底部。这个走势关键在于走平的时间。没有一定的规律。如果超过5分钟。那么一定是底部。
+如果只有3分钟，那么可能会有反弹。但是不会是底部。
 <br />
 <br />
+2. 底部有各种变化。走平或者是双底。双底有时间大小。如果双底间隔时间不长。和前面下跌的走势相比。那么
+这个走势可能会反弹后继续下跌。如果双底间隔时间很长。那么会是很大的反转。
+<br />
+<br />
+
 <img src="uneven_drop.PNG" alt="rise and drop" width="1000" height="700">
-<h3 style="color:MediumSeaGreen;">图示：11:10出现横向5浪后，开始下跌。下跌后，走平，再次下，两段跌幅一样。
-这样就暂时到了底部。
+<h3 style="color:MediumSeaGreen;">图示：11：30.前面两段下跌。中间走平时间很长。这个在底部出现了双底。然后开始缓慢上升。
 </h3>
 
 
+<img src="new_high_in_falling_trend.PNG" alt="rise and drop" width="1000" height="700">
+<h3 style="color:MediumSeaGreen;">图示：2：30下跌后，走平7分钟，然后继续下跌。这个一定是底部。它从底部立刻反弹。
+反弹幅度还很大。但是仍然不能说结束了。它后来下来。形成双底。两个底间隔长达一个小时。那么就是底部了。
+</h3>
 
 
 
@@ -4833,14 +4881,7 @@ C.  下跌后，也可能是真实下跌，也可能是陷阱大跌
 <h3 style="color:MediumSeaGreen;">图示：大盘在11：00调整结束后，加速下跌，形成底部，在底部立刻反弹，但是过了几分钟
 再次下来，但是没有到达低点就反弹了。这个就确认前面就是最低点了。
 </h3>
-<img src="trap_drop_rise_drop.PNG" alt="oscilate_trap" width="1000" height="700">
-<h3 style="color:MediumSeaGreen;">图示：这个似乎走出加速下跌。但是要看到12：10出现陷阱大涨，就是跌下来后，很短时间
-就开始涨，而且第一分钟涨幅比较大。这其实是一个新的跌势的开始。所以它在12：40虽然下跌速度很大，但是是第一段下跌。
-另外观察它的底部特点，1：20附近，出现了陷阱大涨，虽然幅度很小，但是在当时观察，还是比较大的。所以意味着要跌。
-</h3>
 
-<br />
-<br />
 
 </b>
 
