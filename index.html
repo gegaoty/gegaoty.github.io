@@ -1,36 +1,39 @@
 <!DOCTYPE html>
 <html>
 <script>
-function calc(form) {
 
-var prev_close = document.getElementById("prev_close").value;
-var prev_change = document.getElementById("prev_change").value;
-var prev_high = document.getElementById("prev_high").value;
-var prev_low = document.getElementById("prev_low").value;
+function retrace_60_percent(form) {
 
-var D = 0.5;
-var dis = parseFloat(prev_high) - parseFloat(prev_low);
-var curr = parseFloat(prev_close) - parseFloat(prev_low);
-if (dis == 0) {
-    D = 0;
-} else {
-    D = curr / dis;
+var high = document.getElementById("highest").value;
+var low = document.getElementById("lowest").value;
+
+var D;
+var entry;
+var dis = parseFloat(high) - parseFloat(low);
+    D = dis * 0.618;
+    entry = parseFloat(high) - D;
+
+    document.getElementById("entry_point").innerHTML = "在这个点数买入： " + entry;
+
+return 0;
 }
 
-if (D > 0.6) {
-    if (parseFloat(prev_change) < 12) {
-        document.getElementById("trend").innerHTML = "前一天收盘接近高点，涨幅不大甚至跌，表示很强";
-    } else {
-        document.getElementById("trend").innerHTML = "前一天收盘接近高点，涨幅比较大，如果要继续涨，需要等45分钟，或者出现冲高大跌走势";
-    }
-} else if (D > 0.4) {
-    document.getElementById("trend").innerHTML = "前一天收盘接近中点，没有趋势";
-} else {
-    document.getElementById("trend").innerHTML = "前一天收盘接近低点，偏熊";
+function rebound_60_percent(form) {
+
+var high = document.getElementById("short_high").value;
+var low = document.getElementById("short_low").value;
+
+var D;
+var entry;
+var dis = parseFloat(high) - parseFloat(low);
+    D = dis * 0.618;
+    entry = parseFloat(low) + D;
+
+    document.getElementById("short_entry").innerHTML = "在这个点数做空： " + entry;
+
+return 0;
 }
 
-return false;
-}
 </script>
 <iframe src="https://sslecal2.forexprostools.com?columns=exc_flags,exc_importance&features=datepicker,timezone&countries=5&calType=day&timeZone=8&lang=1" width="650" height="467" frameborder="0" allowtransparency="true" marginwidth="0" marginheight="0"></iframe><div class="poweredBy" style="font-family: Arial, Helvetica, sans-serif;"><span style="font-size: 11px;color: #333333;text-decoration: none;">Real Time Economic Calendar provided by <a href="https://www.investing.com/" rel="nofollow" target="_blank" style="font-size: 11px;color: #06529D; font-weight: bold;" class="underline_link">Investing.com</a>.</span></div>
 <body>
@@ -41,17 +44,28 @@ return false;
 <iframe src="https://www.widgets.investing.com/live-indices?theme=darkTheme&cols=last,high,low,change,changePerc,time&pairs=166" width="100%" height="100%" frameborder="0" allowtransparency="true" marginwidth="0" marginheight="0"></iframe><div class="poweredBy" style="font-family: Arial, Helvetica, sans-serif;">Powered by <a href="https://www.investing.com?utm_source=WMT&amp;utm_medium=referral&amp;utm_campaign=LIVE_INDICES&amp;utm_content=Footer%20Link" target="_blank" rel="nofollow">Investing.com</a></div><br />
 <br />
 
-<h1 style="color:Tomato;">前一天的情况</h1>
+=====================================================================================
+<h1 style="color:Tomato;">上升时候斐波那契回调点数</h1>
 
-收盘: <input type="text" id="prev_close"  size="8" value="2734"/>
-最高点: <input type="text" id="prev_high"  size="8" value="2736"/>
-最低点: <input type="text" id="prev_low"  size="8" value="2721"/>
-变动: <input type="text" id="prev_change"  size="8" value="29"/>
+最高点: <input type="text" id="highest"  size="8" value="2664"/>
+最低点: <input type="text" id="lowest"  size="8" value="2652"/>
 
 <br />
-<input type="button" value="预测" onClick="calc(this)">
+<input type="button" value="计算做多点" onClick="retrace_60_percent(this)">
 
-<h1 style="color:Violet;"> <p id="trend" name="r1"> </h1>
+<h1 style="color:Violet;"> <p id="entry_point" name="r1"> </h1>
+<br />
+</p>
+=====================================================================================
+<h1 style="color:Tomato;">下跌时候斐波那契反弹点数，这个可能用处不大</h1>
+
+最高点: <input type="text" id="short_high"  size="8" value="2764"/>
+最低点: <input type="text" id="short_low"  size="8" value="2752"/>
+
+<br />
+<input type="button" value="计算做空点" onClick="rebound_60_percent(this)">
+
+<h1 style="color:Violet;"> <p id="short_entry" name="r1"> </h1>
 <br />
 </p>
 
@@ -149,7 +163,18 @@ return false;
 很可能做反方向了。比如市场很快的上涨，然后慢慢下来。说明要大跌，突破原来低点。市场不会这么仁慈，给你送钱。同样发生在做空的时候。
 市场很快大跌，然后反弹，似乎要回到原位。实际上大涨。突破原来高点。
 </em></h1>
+=========================================================================================
+<h1 style="color:DodgerBlue;"><em>我的操作弱点:</em></h1>
+<h2 style="color:Red;"><em>
+1.  对的时候，拿不住，特别是一天的第一个主要走势，很快就take profit。以满足自己的欲望。
+平仓后，发现大盘继续按照自己的方向运动，则心理不平衡，很快就反向操作。
+结果损失惨重。要想到自己辛辛苦苦的找到的走势，那么容易就放弃了。对自己的劳动不尊重。
+<br />
+<br />
+2. 抄顶或者抄底的时候，特别是抄底，如果大盘比自己的价格低很多。会看到大盘上来后，立刻卖掉。其实自己心理也明白
+大盘一定会继续涨的。但是就是控制不住自己的恐惧。一打平就卖掉了。
 
+</em></h2>
 =========================================================================================
 <h1 style="color:Red;"><em> 开盘的操作，如果不是很明显的走势，那么应该等它走势明了，判断是升势还是跌势的操作。
 不要想的去赚点再说。这个很容易毁掉一天的交易。
@@ -336,18 +361,6 @@ return false;
 <br />
 3. 刚刚开盘出现的主要走势，对它认识不清，过早的反向操作。希望它会反转，而作为作为一个主要走势，不一定就会反转。
 一旦不反转，那么就损失惨重。应该识别为主要走势后，尽早加入，直到反转或者不反转为止。
-</em></h2>
-=========================================================================================
-<h1 style="color:DodgerBlue;"><em>我的操作弱点:</em></h1>
-<h2 style="color:Red;"><em>
-1.  对的时候，拿不住，特别是一天的第一个主要走势，很快就take profit。以满足自己的欲望。
-平仓后，发现大盘继续按照自己的方向运动，则心理不平衡，很快就反向操作。
-结果损失惨重。要想到自己辛辛苦苦的找到的走势，那么容易就放弃了。对自己的劳动不尊重。
-<br />
-<br />
-2. 抄顶或者抄底的时候，特别是抄底，如果大盘比自己的价格低很多。会看到大盘上来后，立刻卖掉。其实自己心理也明白
-大盘一定会继续涨的。但是就是控制不住自己的恐惧。一打平就卖掉了。
-
 </em></h2>
 =========================================================================================
 
@@ -2498,7 +2511,16 @@ c. 如果冲高后，创新高后，立刻从高点下来，连续2分钟，然�
 
 <a name="long_time_oscilate_in_high"></a> 
 <h1 style="background-color:DodgerBlue;"><em>长时间高位震荡判断后续走势 </em></h1>
-1. 如果高位震荡的时候，出现比震荡点高的点，那么会继续涨。如果一直低于震荡点。那么会跌。
+1. 如果高位震荡的时候，出现比震荡点高的点，然后立刻回调，但是仍然在高位。那么这个走势会涨。
+<br />
+<br />
+2. 如果高位震荡，出现比震荡点高点。但是震荡幅度很大。能量都被浪费了。那么这个走势会跌。
+<br />
+<br />
+3. 如果高位震荡，不断出现和最高点接近的点数，但是没有超过。那么会大跌。
+<br />
+<br />
+4. 如果高位震荡，一直远远低于最高点，但是在底部运动，那么最后还是会反弹大涨。
 <br />
 <br />
 
@@ -2510,7 +2532,15 @@ c. 如果冲高后，创新高后，立刻从高点下来，连续2分钟，然�
       <img src="slow_drop_bottom_shape.PNG" alt="rise and drop" width="1000" height="700">
 <br />
       <h3 style="color:MediumSeaGreen;">图示：12：00开始长时间震荡。它的开盘表示它处于升势。然而它
-上升后，下来，一直在高位附近震荡，但是一直低于高点。说明要跌。
+上升后，下来，一直在高位附近震荡，但是一直低于高点。说明要跌。市场营造出来2935 这个点，似乎是个底部。
+最后大跌前，市场冲高。然后大跌，一举冲破这个底部。
+要想到这个走势在前面走平了很久，所以不会很快反弹。可以拿很久。越久利润越高。
+</h3>
+      <img src="rise_osci_drop.PNG" alt="rise and drop" width="1000" height="700">
+<br />
+      <h3 style="color:MediumSeaGreen;">图示：11：50创新高后，后面不断的反弹，然而却不超过最高点。
+这样能量被浪费，还很弱。最后会大跌。市场营造出来2663这个底部。每次都反弹。最后跌破它后反弹，冲高，
+然后下来，一举冲破。要想到这个走势在前面走平了很久，所以不会很快反弹。可以拿很久。越久利润越高。
 </h3>
 
      <img src="failed_rise_drop.PNG" alt=" drop and shak and drop huge" width="1000" height="700">
