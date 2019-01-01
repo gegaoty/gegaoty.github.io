@@ -73,6 +73,7 @@ return 0;
 <h2 style="color:Red;"><em>
 0. 只做主要走势，做了之后，要尽量拿到最后一刻反转。中间在合适的时候，可以来回交易，
 但是要坚持主要走势，只要没有到达尽头。如果主要走势开始的时候错过最高点/最低点，也要去追。
+主要走势有可能有嵌套。如果有，可以用期权操作。
 </em></h2>
 <h2 style="color:Red;"><em>
 1. 多空趋势要中立，特别是我倾向做空。不敢做多。难以判断的时候，把图形镜像反转来判断。
@@ -325,24 +326,6 @@ return 0;
 <h1 style="color:Red;"><em> 6. 上涨的bar的和下跌的bar的速度是否一致</em></h1>
 
 =========================================================================================
-<h1 style="color:Green;"><em> 最熟悉走势列表：</em></h1>
-<br />
-<h1 style="color:Blue;"><em> 5浪上涨后做空</em></h1>
-<h1 style="color:Blue;"><em> 加速上涨后，在顶部停留几分钟做空</em></h1>
-<h1 style="color:Blue;"><em> 下跌后，尖锐或者走平反弹回到原位后继续做空</em></h1>
-<h1 style="color:Blue;"><em> 横向5浪或者下跌后出现双顶后做空</em></h1>
-<h1 style="color:Blue;"><em> 上涨后，出现大幅加速后做空</em></h1>
-<h1 style="color:Blue;"><em> 创新高后，一直在高点大幅震荡超过2个小时，但是没有新高后冲高做空</em></h1>
-<h1 style="color:Blue;"><em> 下跌后，反弹的高点和前面低点接近，做空</em></h1>
-<br />
-<h1 style="color:Red;"><em> 弱第一浪走势做多</em></h1>
-<h1 style="color:Red;"><em> 两段下跌后做多。</em></h1>
-<h1 style="color:Red;"><em> 逐渐增强走势做多</em></h1>
-<h1 style="color:Red;"><em> 缓慢上涨超过一个小时，形成升势后做多</em></h1>
-<h1 style="color:Red;"><em> 下跌后，出现双顶后，再次下跌后，做多</em></h1>
-<h1 style="color:Red;"><em> 下跌后，不断反弹，最后加速下跌后，做多</em></h1>
-<h1 style="color:Red;"><em> 下跌后，反弹幅度低于下跌高点，但是越过关键点后，做多</em></h1>
-=========================================================================================
 <h1 style="color:Red;"><em> 不要让前一笔交易的价格影响自己对下一笔交易的判断，每一笔交易都独立判断。
 不要因为觉得自己吃亏了，而放弃一个走势，也不要因为自己占便宜了。而轻易出手。
 </em></h1>
@@ -549,6 +532,7 @@ return 0;
 <br />
 
 <a href="#slow_rise_at_bottom_for_1hour"><h1 style="color:Red;"><em>在底部缓慢上涨或者震荡，超过一个小时,形成升势</em></h1></a>
+<a href="#first_wave_with_accel"><h1 style="color:Red;"><em>第一波上涨出现加速走势</em></h1></a>
 <a href="#down_pulse_and_bottom_out"><h1 style="color:Red;"><em>在底部出现下影线，形成底部后大涨。</em></h1></a>
 <a href="#slow_strenthen_mode"><h1 style="color:Red;"><em>从低处逐渐增强的上涨</em></h1></a>
 <a href="#fast_drop_in_rising_mode"><h1 style="color:Red;"><em>升势中，两种下跌方式</em></h1></a>
@@ -1259,8 +1243,7 @@ a。跌势的开始：
 <h1 style="color:DodgerBlue;"><em><a href="#whole_day_rising">对全天升势走势的分析:</a> </em></h1>
 <h1 style="color:DodgerBlue;"><em><a href="#whole_day_rise_pull_back_two_possible">对全天升势走势大幅回调的两种可能:</a> </em></h1>
 <h1 style="color:DodgerBlue;"><em><a href="#reversal_after_drop">下跌后反转的各种变化:</a> </em></h1>
-<h1 style="color:DodgerBlue;"><em><a href="#long_time_rise_after_long_oscilate">升势中，长时间震荡后，大涨走势</a> </em></h1>
-<h1 style="color:DodgerBlue;"><em><a href="#low_oscilate_and_drop">熊市中，跌势下低位长时间震荡后大跌走势</a> </em></h1>
+
 <h1 style="color:DodgerBlue;"><em><a href="#bear_market_bottom_accel">熊市中，大幅下跌后，各种表现对后市的变化</a> </em></h1>
 <h1 style="color:DodgerBlue;"><em><a href="#diff_between_low_accelerate">熊市中两种底部加速的区别</a> </em></h1>
 <h1 style="color:DodgerBlue;"><em><a href="#fast_rise_flat_and_rise_again">快速大幅上涨后，走平10分钟。继续快速上涨</a> </em></h1>
@@ -2521,6 +2504,11 @@ c. 如果冲高后，创新高后，立刻从高点下来，连续2分钟，然�
 1. 市场总是处于一个走势当中，不是跌势就是涨势。跌势结束后，一定是涨势，涨势结束后，一定是跌势。
 <br />
 <br />
+2. 趋势有时又有嵌套，嵌套可以有两层甚至三层。一般两层比较常用。在应用一级趋势的时候，要注意是否有更大的趋势。
+这个趋势会是全天的趋势。通常会用长时间的震荡（超过2个小时）来制造趋势。
+<br />
+<br />
+
 <img src="big_picture_up.PNG" alt="oscilate_trap" width="1000" height="700">
 <h3 style="color:MediumSeaGreen;">图示：大盘开盘形成跌势，出现了两段走势。它反弹后，超过了2485.说明是升势了。
 下跌走势已经结束了。中间震荡很久。让我不知道是跌势还是涨势。但是如果用这个来判断就明确了。
@@ -2530,6 +2518,28 @@ c. 如果冲高后，创新高后，立刻从高点下来，连续2分钟，然�
 <h3 style="color:MediumSeaGreen;">图示：11：40下跌趋势在小的两段走势加双底走势中结束，成为升势，
 升势在1：00到1：30分的加速上升走势中结束。开始跌势。
 </h3>
+
+<img src="long_time_oscilate_and_rise.PNG" alt="oscilate_trap" width="1000" height="700">
+<h3 style="color:MediumSeaGreen;">图示：1：00出现新高后，立刻下跌，速度很快。新高只比原来的高点高一些。
+2：00再次出现新高。它的高点也是稍微高一些，不是很高。立刻回调。从12：10到3：00，可以看到大盘没有怎么涨。
+一直在一个小的范围徘徊，而且创新高后，回调很快。这样都预示着会有一轮暴涨。应该买期权同时做多ES。然后一直拿着到收盘。
+这个一旦发动不会很容易回调的。
+</h3>
+
+<img src="oscilate_and_drop.PNG" alt="oscilate_trap" width="1000" height="700">
+<h3 style="color:MediumSeaGreen;">图示：大盘从11：20开始震荡，明显它处于跌势，关键在于它是否转向。
+它不断的反弹，在低位停留很短时间。它在创新低的时候，从高位创新低，而且在底部停留很短时间就大幅反弹了。
+这个时候可以买期权做空。
+</h3>
+<br />
+<br />
+     <img src="two_stage_drop_1.PNG" alt=" two stage drop" width="1000" height="700">
+<br />
+<h3 style="color:MediumSeaGreen;">图示：开盘后，冲高大跌，下跌后，跌势不大，就开始走平。走平期间，
+出现明显低于走平开始的点。这进一步证明了它后面会大跌。1:40开始正式下跌，从2630跌倒了2608，反弹后震荡10分钟。
+继续从2610跌倒了2590. 
+</h3>
+
 
 <a name="intuitive_trap"></a> 
 <h1 style="background-color:DodgerBlue;"><em>市场制造的直觉陷阱 </em></h1>
@@ -3103,6 +3113,16 @@ c. 如果冲高后，创新高后，立刻从高点下来，连续2分钟，然�
 <h3 style="color:MediumSeaGreen;">图示：1：40出现了底部。它一下走低到了2702.然后立刻收回。在2705的地方停下来。
 这个时候应该立刻做多。如果考虑它已经是两次跨越后的加速走势。
 
+
+
+<a name="first_wave_with_accel"></a> 
+<h1 style="background-color:DodgerBlue;"><em>第一波上涨形成加速走势 </em></h1>
+1. 第一波上涨形成加速，但是不代表走势结束。它一般会大幅回调，然后再次上涨。
+<br />
+<br />
+     <img src="vacume_mode.PNG" alt=" small oscilate_trap" width="1000" height="700">
+<br />
+<h3 style="color:MediumSeaGreen;">图示：2：40上涨后，出现了加速走势。然后大幅回调。这个不是走势的终结。
 
 
 <a name="slow_rise_at_bottom_for_1hour"></a> 
@@ -4000,7 +4020,6 @@ c. 如果冲高后，创新高后，立刻从高点下来，连续2分钟，然�
 <br />
 <br />
 
-
 <img src="open_trap_drop_beark_mkt.PNG" alt="oscilate_trap" width="1000" height="700">
 <h3 style="color:MediumSeaGreen;">图示：这个大跌准备不足，所以连续下跌后，遇到抵抗，就到底了。但是它的反弹开始太强，
 导致后面没有力量。
@@ -4009,42 +4028,6 @@ c. 如果冲高后，创新高后，立刻从高点下来，连续2分钟，然�
 </h3>
 <br />
 <br />
-
-
-<a name="long_time_rise_after_long_oscilate"></a> 
-<h1 style="background-color:DodgerBlue;"><em>升势中，长时间震荡后，大涨走势 </em></h1>
-0. 要注意不是反转，有可能是反转。所以要仔细评估。如果大涨后，下跌很快，毫无障碍，那么很可能是升势。
-<br />
-<br />
-<img src="long_time_oscilate_and_rise.PNG" alt="oscilate_trap" width="1000" height="700">
-<h3 style="color:MediumSeaGreen;">图示：1：00出现新高后，立刻下跌，速度很快。新高只比原来的高点高一些。
-2：00再次出现新高。它的高点也是稍微高一些，不是很高。立刻回调。从12：10到3：00，可以看到大盘没有怎么涨。
-一直在一个小的范围徘徊，而且创新高后，回调很快。这样都预示着会有一轮暴涨。应该买期权同时做多ES。然后一直拿着到收盘。
-这个一旦发动不会很容易回调的。
-</h3>
-
-<a name="low_oscilate_and_drop"></a> 
-<h1 style="background-color:DodgerBlue;"><em>熊市中，跌势下低位长时间震荡后大跌走势 </em></h1>
-0. 这个走势可以用期权put做空。在它创新低后，反弹到前面高点的时候，
-<br />
-<br />
-
-
-<img src="oscilate_and_drop.PNG" alt="oscilate_trap" width="1000" height="700">
-<h3 style="color:MediumSeaGreen;">图示：大盘从11：20开始震荡，明显它处于跌势，关键在于它是否转向。
-它不断的反弹，在低位停留很短时间。它在创新低的时候，从高位创新低，而且在底部停留很短时间就大幅反弹了。
-这个时候可以买期权做空。
-</h3>
-<br />
-<br />
-
-     <img src="two_stage_drop_1.PNG" alt=" two stage drop" width="1000" height="700">
-<br />
-<h3 style="color:MediumSeaGreen;">图示：开盘后，冲高大跌，下跌后，跌势不大，就开始走平。走平期间，
-出现明显低于走平开始的点。这进一步证明了它后面会大跌。1:40开始正式下跌，从2630跌倒了2608，反弹后震荡10分钟。
-继续从2610跌倒了2590. 
-</h3>
-
 
 <a name="weak_1st_wave"></a> 
 <h1 style="background-color:DodgerBlue;"><em>弱第一浪走势 </em></h1>
