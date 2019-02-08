@@ -37,7 +37,7 @@ function dropping_mode(form) {
   if (vacum_fill == "1") {      
 	  result_3 = "真空已经填补，走势未定";
   } else {
-      result_3 = "真空没有填补，很可能要大反弹，会反转";
+      result_3 = "真空没有填补，很可能要大反弹，会反转， 一旦反转，至少要填补真空，或者更多。但是也不要给真空吓倒，市场常常在真空附近走平后，直接跨越";
   }
   
   document.getElementById("decision").innerHTML = result;
@@ -46,6 +46,34 @@ function dropping_mode(form) {
   document.getElementById("decision_3").innerHTML = result_3;
   
 }
+function rising_mode(form) {
+
+  
+  var exploded_rise = document.getElementById("id_exploded_rise").value;
+  var vacum_fill = document.getElementById("id_r_vacum_filled").value;
+  
+  var result, result_1;
+  
+  result = "不适用";
+  result_1 = "不适用";
+
+  
+  if (exploded_rise == "1") {      
+	  result = "主要走势出现第二阶段大涨，上涨结束，大盘处于跌势";
+  } else {
+      result = "主要走势只出现了第一波上涨，会继续上涨";
+  }
+  
+  if (vacum_fill == "1") {      
+	  result_1 = "真空已经填补，走势未定";
+  } else {
+      result_1 = "真空没有填补，很可能要大跌，会反转，一旦反转，至少要填补真空，或者更多。但是也不要给真空吓倒，市场常常在真空附近走平后，直接跨越";
+  }
+  document.getElementById("r_decision").innerHTML = result;
+  document.getElementById("r_decision_1").innerHTML = result_1;
+  
+}
+
 </script>
 <body>
 
@@ -97,6 +125,30 @@ function dropping_mode(form) {
 </p>
 =====================================================================================
 
+<h1 style="color:Tomato;">大势判断程序，升势中是否转向</h1>
+  
+<b style="color:Red;">升势的主要走势是否爆发，就是休息一段，然后再次大涨</b>
+<select id="id_exploded_rise">
+  <option value="1">大盘休息后，再次大涨</option>
+  <option value="0">大盘休息后，没有大涨，而是震荡</option>
+</select>
+
+<br />
+<br />
+<b style="color:Red;">盘中是否有真空没有填</b>
+<select id="id_r_vacum_filled">
+  <option value="1">真空已经填补</option>
+  <option value="0">真空没有填补</option>
+</select>
+
+<br />
+<br />
+<br />
+<input type="button" value="大势判断，升势中是否转向" onClick="rising_mode(this)">
+<h1 style="color:Violet;"> <p id="r_decision" name="r1"> </h1>
+<h1 style="color:Violet;"> <p id="r_decision_1" name="r1"> </h1>
+</p>
+=====================================================================================
 <a name="top_ref"></a> 
 <br />
 <a href="#in_rising"><h1 style="color:DodgerBlue;"><em>大盘处在上升期间</em></h1></a>
