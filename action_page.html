@@ -7,37 +7,43 @@ function dropping_mode(form) {
   var exploded_drop = document.getElementById("id_exploded_drop").value;
   var new_low_after_first = document.getElementById("id_new_low_after_first").value;
   var vacum_fill = document.getElementById("id_vacum_filled").value;
-  var second_stage_rising = document.getElementById("id_two_stage_drop_second_rising").value;
-  var two_stage = document.getElementById("id_two_stage_drop_second_rising").value;
+  var second_stage_rising = document.getElementById("id_reversal_second_stage_rising").value;
   
-  var result, result_1;
+  var result, result_1, result_2, result_3;
   
-  result_1 = "不适用";
   result = "不适用";
+  result_1 = "不适用";
+  result_2 = "不适用";
+  result_3 = "不适用";
+
   
   if (exploded_drop == "1") {      
-	  result = "主要走势出现两段下跌，下跌结束，开始上涨";
+	  result = "主要走势出现第二阶段下跌，下跌结束，大盘处于升势";
   } else {
       result = "主要走势只出现了第一波下跌，会继续下跌";
   }
   if (new_low_after_first == "1") {      
-	  result = "新的一轮跌势，出现新低后，反弹，会继续大跌";
+	  result_1 = "新的一轮跌势，出现新低后，反弹或者不反弹，会继续大跌";
   } else if (new_low_after_first == "0"){
-      result = "新的一轮跌势，没有新低，需要继续观察，等它第二波下跌结束";
+      result_1 = "新的一轮跌势，没有新低，需要继续观察，等它第二波下跌结束";
   }
   
-  if (two_stage == "1") {      
-	  result = "出现了两段下跌走势反转，处于升势，需要等第二段上涨";
+  if (second_stage_rising == "1") {      
+	  result_2 = "出现了第二段上涨，大盘恢复跌势";
+  } else {
+      result_2 = "反转后，没有发生第二段上涨，大盘处于升势，应该寻找升势走势，可能是长距离两段走势。";
   }
   
   if (vacum_fill == "1") {      
-	  result_1 = "真空已经填补，走势未定";
+	  result_3 = "真空已经填补，走势未定";
   } else {
-      result_1 = "真空没有填补，很可能要大反弹，会反转";
+      result_3 = "真空没有填补，很可能要大反弹，会反转";
   }
   
   document.getElementById("decision").innerHTML = result;
   document.getElementById("decision_1").innerHTML = result_1;
+  document.getElementById("decision_2").innerHTML = result_2;
+  document.getElementById("decision_3").innerHTML = result_3;
   
 }
 </script>
@@ -47,45 +53,29 @@ function dropping_mode(form) {
 =====================================================================================
 <h1 style="color:Tomato;">大势判断程序，跌势中是否转向</h1>
   
-<b style="color:Red;">下跌的走势是否爆发，就是休息一段，然后再次暴跌</b>
+<b style="color:Red;">下跌的主要走势是否爆发，就是休息一段，然后再次暴跌</b>
 <select id="id_exploded_drop">
-  <option value="1">发生</option>
-  <option value="0">没有发生</option>
+  <option value="1">大盘休息后，再次暴跌</option>
+  <option value="0">大盘休息后，没有暴跌，而是震荡</option>
 </select>
 
 <br />
 <br />
-<b style="color:Red;">盘中是否有双底</b>
-<select id="id_double_bottom">
-  <option value="1">发生</option>
-  <option value="0">没有发生</option>
-</select>
-
-<br />
-<br />
-<b style="color:Red;">如果有反转走势，是否产生第二段上涨</b>
-<select id="id_two_stage_drop_second_rising">
-  <option value="1">发生</option>
-  <option value="0">没有发生</option>
-</select>
-
-<br />
-<br />
-<b style="color:Red;">盘中出现第一段下跌后反弹，反弹点是新低</b>
+<b style="color:Red;">盘中出现第一段下跌反弹或者不反弹，出现新低</b>
 <select id="id_new_low_after_first">
   <option value="2">不适用</option>
-  <option value="1">发生</option>
-  <option value="0">没有发生</option>
+  <option value="1">发生第一段下跌，有新低</option>
+  <option value="0">发生第一段下跌，没有新低</option>
 </select>
 
 <br />
 <br />
-<b style="color:Red;">盘中是否有两段下跌走势后反转</b>
-<select id="id_two_stage_drop_reversal">
-  <option value="2">不适用</option>
-  <option value="1">发生</option>
-  <option value="0">没有发生</option>
+<b style="color:Red;">如果有反转走势，反转走势可以是，双底，两段下跌反转，两次跨越反转，是否产生第二段上涨</b>
+<select id="id_reversal_second_stage_rising">
+  <option value="1">产生第二段上涨</option>
+  <option value="0">没有产生第二段上涨</option>
 </select>
+
 
 <br />
 <br />
@@ -96,14 +86,15 @@ function dropping_mode(form) {
 </select>
 
 <br />
+<br />
+<br />
 <input type="button" value="大势判断，跌势中是否转向" onClick="dropping_mode(this)">
 <h1 style="color:Violet;"> <p id="decision" name="r1"> </h1>
-<br />
 <h1 style="color:Violet;"> <p id="decision_1" name="r1"> </h1>
+<h1 style="color:Violet;"> <p id="decision_2" name="r1"> </h1>
+<h1 style="color:Violet;"> <p id="decision_3" name="r1"> </h1>
 
-<br />
 </p>
-
 =====================================================================================
 
 <a name="top_ref"></a> 
