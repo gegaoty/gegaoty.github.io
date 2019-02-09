@@ -51,11 +51,14 @@ function rising_mode(form) {
   
   var exploded_rise = document.getElementById("id_exploded_rise").value;
   var vacum_fill = document.getElementById("id_r_vacum_filled").value;
+  var rising_pattern = document.getElementById("id_rising_pattern").value;
   
-  var result, result_1;
+  
+  var result, result_1, result_2;
   
   result = "不适用";
   result_1 = "不适用";
+  result_2 = "不适用";
 
   
   if (exploded_rise == "1") {      
@@ -69,8 +72,15 @@ function rising_mode(form) {
   } else {
       result_1 = "真空没有填补，很可能要大跌，会反转，一旦反转，至少要填补真空，或者更多。但是也不要给真空吓倒，市场常常在真空附近走平后，直接跨越";
   }
+  if (rising_pattern == "1") {      
+	  result_2 = "上涨过程中，升势不断的被拉回，虽然不断新高，这样有持续性";
+  } else {
+      result_2 = "上涨过程中，升势有积累和加速上涨，在高点停留几分钟。出现顶部，要反转，一旦反转会大跌。不要轻易出局。";
+  }
+  
   document.getElementById("r_decision").innerHTML = result;
   document.getElementById("r_decision_1").innerHTML = result_1;
+  document.getElementById("r_decision_2").innerHTML = result_2;
   
 }
 
@@ -143,10 +153,21 @@ function rising_mode(form) {
 
 <br />
 <br />
+<b style="color:Red;">上涨的过程中是否稳健</b>
+<select id="id_rising_pattern">
+  <option value="1">上涨过程中，稍微涨一些，在高点就被拉回</option>
+  <option value="0">上涨过程中，有加速，或者冲高走平后，再次冲高，在高点走平</option>
+</select>
+
 <br />
+<br />
+<br />
+
 <input type="button" value="大势判断，升势中是否转向" onClick="rising_mode(this)">
 <h1 style="color:Violet;"> <p id="r_decision" name="r1"> </h1>
 <h1 style="color:Violet;"> <p id="r_decision_1" name="r1"> </h1>
+<h1 style="color:Violet;"> <p id="r_decision_2" name="r1"> </h1>
+
 </p>
 =====================================================================================
 <a name="top_ref"></a> 
@@ -154,6 +175,45 @@ function rising_mode(form) {
 <a href="#in_rising"><h1 style="color:DodgerBlue;"><em>大盘处在上升期间</em></h1></a>
 <a href="#in_falling"><h1 style="color:DodgerBlue;"><em>大盘处在下跌期间</em></h1></a>
 <a href="#small_mode_open_summary"><h1 style="color:DodgerBlue;"><em>刚刚开盘后的小型走势</em></h1></a>
+<a href="#two_stage_analysis"><h1 style="color:DodgerBlue;"><em>两段走势的分析</em></h1></a>
+
+<a name="two_stage_analysis"></a> 
+<h1 style="background-color:Red;"><em>两段走势的分析 </em></h1>
+<a href="#top_ref"><h2 style="color:Red;"><em>TOP</h2></em></a>
+一个走势，总是分为两个阶段的。但是这两个阶段。时间长短不一定，幅度大小也不一定。第二个阶段是否结束也不一定。所以一定要仔细分析。
+可以只做第二个阶段。这样会更有把握。但是有时候，第二个阶段很小。所以这个也是难说。
+
+<img src="whole_day_two_stage_1.PNG" alt="test" width="1000" height="600">
+<h3 style="color:MediumSeaGreen;">图示：
+<br />
+1. 一开盘下跌，大盘处于跌势。但是当天的跌势不是很强。到了7：40，它大幅冲高，然后飞快下跌，
+创新低。这样跌势以一个惊心动魄的方式结束了。这样的大跌，会让人直觉上看跌。结果跌势结束了。
+<br />
+2. 结束后，冲高，但是幅度很小，而且很快就拉回了。
+8：40创新低，立刻回来，形成一个双底。这样就开始了升势。升势的第一阶段，快速大涨。9：00开始回调.9：15回调结束。开始第二阶段。
+然而这个第二阶段，非常的慢，中间经历了长时间震荡，回调关键点，不断拉回后创新高的样子，所以一直没有结束。直到收盘前，大涨。
+
+</h3>
+<img src="whole_day_two_stage_2.PNG" alt="test" width="1000" height="600">
+<h3 style="color:MediumSeaGreen;">图示：
+<br />
+1. 开盘后，处于升势，7：00开始第一波上涨，回调后，开始第二波上涨。第二波上涨很快加速到达顶部。
+开始了跌势。
+<br />
+2. 跌势的第一波大跌，一下子就跌倒了2705.从7：50到8：10都在休息。其实是缓慢下跌。然后8：20加速下跌。跌势结束。开始升势。
+<br />
+3. 9：30开始升势。结果是个两段上涨走势，然后双顶。升势结束。
+<br />
+4. 9：40开始下跌，两段下跌。和前面形成双底。跌势结束。
+<br />
+5. 9：55开始升势，第一浪速度很快10：20回调后，开始第二浪，10：40结束，升势结束，开始跌势。
+<br />
+6. 11：20，出现两段下跌走势，反弹跨越两段下跌，形成升势，第一浪很大，然后回调，中间一直在震荡，没有第二浪。可以看到它不断
+从高点拉回，一直到了收盘前，走低，走平，大涨。也就是第二浪一直没有结束，留在收盘爆发。
+</h3>
+
+
+
 
 <a name="in_falling"></a> 
 <h1 style="background-color:Red;"><em>大盘处在下跌期间 </em></h1>
