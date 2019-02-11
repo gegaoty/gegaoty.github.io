@@ -23,13 +23,18 @@ function dropping_mode(form) {
       result = "主要走势只出现了第一波下跌，会继续下跌";
   }
   if (new_low_after_first == "1") {      
-	  result_1 = "新的一轮跌势，出现新低后，反弹或者不反弹，会继续大跌";
+	  result_1 = "新低不一定就是跌势，如果新低比较缓慢，那么是跌势的持续，但是也可能是双底走势的第二个底，" + 
+                   "特别是新低的时候，比较剧烈，呈现加速状态，要么是第二个底，要么就是跌势的结束" ;
   } else if (new_low_after_first == "0"){
-      result_1 = "新的一轮跌势，没有新低，需要继续观察，等它第二波下跌结束";
+      result_1 = "没有新低，那么很可能跌势结束了。特别是大盘远离低点，或者很久没有到低点";
   }
   
   if (second_stage_rising == "1") {      
-	  result_2 = "出现了第二段上涨，大盘恢复跌势";
+	  result_2 = "出现第二段上涨的时候，要考虑上涨的幅度，如果两段加起来幅度很大" + 
+          ", 那么就是真的反转了。大盘开始下跌，或创新低， " + 
+          "如果很小，连前面的真空都没有填补，那么大盘仍然处于升势, ", + 
+           ",但是暂时处于跌势，它会很快出现两段下跌的走势后，再次反转成升势" + 
+            "出现了第二段上涨，大盘恢复跌势";
   } else {
       result_2 = "反转后，没有发生第二段上涨，大盘处于升势，应该寻找升势走势，可能是长距离两段走势。";
   }
@@ -47,9 +52,7 @@ function dropping_mode(form) {
   document.getElementById("decision_3").innerHTML = result_3;
   
 }
-function rising_mode(form) {
-
-  
+function rising_mode(form) {  
   var exploded_rise = document.getElementById("id_exploded_rise").value;
   var vacum_fill = document.getElementById("id_r_vacum_filled").value;
   var rising_pattern = document.getElementById("id_rising_pattern").value;
@@ -135,6 +138,25 @@ function contra(form) {
   document.getElementById("x_decision_3").innerHTML = result_3;  
 }
 
+function big_mode(form) {  
+  var v_big_mode = document.getElementById("id_big_mode").value;
+  var result;
+  
+  result = "不适用";
+  
+  if (v_big_mode == "1") {      
+	  result = "冲高后，是第一段上涨，回到原位，意味着第二次上涨一定会超过这个点。" + 
+                 "如果它接近收盘，可以用期权操作，会大涨";
+  } else {
+      result = "缓慢的上涨，很久才一个点，稍微涨一下，立刻拉回，总的趋势是涨," + 
+               "但是涨的很少。这样在最后，要么暴涨，要么出现长时间的大涨," +
+                "如果出现了高点，立刻拉回，后面一定会超过这个点。如果接近收盘，可以加仓期权";
+  }
+    
+  document.getElementById("b_decision").innerHTML = result;
+  
+}
+
 </script>
 <body>
 
@@ -150,11 +172,10 @@ function contra(form) {
 
 <br />
 <br />
-<b style="color:Red;">盘中出现第一段下跌反弹或者不反弹，出现新低</b>
+<b style="color:Red;">盘中出现新低</b>
 <select id="id_new_low_after_first">
-  <option value="2">不适用</option>
-  <option value="1">发生第一段下跌，有新低</option>
-  <option value="0">发生第一段下跌，没有新低</option>
+  <option value="1">有新低</option>
+  <option value="0">没有新低</option>
 </select>
 
 <br />
@@ -269,6 +290,24 @@ function contra(form) {
 </p>
 =====================================================================================
 
+<h1 style="color:Tomato;">不容易判断但是会出现巨额利润的走势，</h1>
+  
+<b style="color:Red;">走势形状</b>
+<select id="id_big_mode">
+  <option value="1">出现双底后，冲高，走平，再次回到双底附近</option>
+  <option value="0">缓慢长时间的上涨</option>
+</select>
+
+<br />
+
+<br />
+
+<input type="button" value="巨额利润走势" onClick="big_mode(this)">
+<h1 style="color:Violet;"> <p id="b_decision" name="r1"> </h1>
+
+</p>
+=====================================================================================
+
 <a name="top_ref"></a> 
 <br />
 <a href="#in_rising"><h1 style="color:DodgerBlue;"><em>大盘处在上升期间</em></h1></a>
@@ -299,8 +338,9 @@ function contra(form) {
 
 <img src="whole_day_two_stage_1.PNG" alt="test" width="1000" height="600">
 <h3 style="color:MediumSeaGreen;">图示：8：00是个底部，它是平坦的，反弹后，力量不大，8：50又回来，
-跌破低点后，立刻反弹。这个关键在于它反弹不大。所以仍然处于转折的地方。如果反弹很大。
-那么这个再次下跌，可能跌破原来低点，继续走低了。
+跌破低点后，立刻反弹。这个关键在于它反弹幅度不大。所以它下来后，仍然是双底走势。如果反弹很大。
+那么这个再次下跌，可能跌破原来低点，继续走低了。象7：40的反弹，幅度很大。那么它再次下来，就跌破了低点。
+
 <br />
 </h3>
 
@@ -329,9 +369,17 @@ function contra(form) {
 <a name="two_stage_analysis"></a> 
 <h1 style="background-color:Red;"><em>两段走势的分析 </em></h1>
 <a href="#top_ref"><h2 style="color:Red;"><em>TOP</h2></em></a>
-一个走势，总是分为两个阶段的。但是这两个阶段。时间长短不一定，幅度大小也不一定。
+1. 一个走势，总是分为两个阶段的。但是这两个阶段。时间长短不一定，幅度大小也不一定。
 第二个阶段是否一定结束也不一定，可能持续到收盘才爆发结束。所以一定要仔细分析。
-
+<br />
+2. 两段走势，要么时间成比例。要么幅度上成比例。如果幅度或者时间太小。只能算后面的一部分。那么还有第二部分。
+<br />
+<br />
+3. 一个走势反转后，如果反向走势幅度很小。那么它是无法反转更大的走势的。只是让更大的走势暂时回调一下。
+比如前面大跌，两段结束，开始上涨。上涨幅度很小。就出现两段走势，开始下跌。那么仍然处于升势。但是暂时
+处于跌势。它可能出现双底，或者在比原来的低点更高的地方就开始走出两段下跌而反转了。
+<br />
+<br />
 
 <img src="whole_day_two_stage_1.PNG" alt="test" width="1000" height="600">
 <h3 style="color:MediumSeaGreen;">图示：
@@ -352,7 +400,9 @@ function contra(form) {
 <br />
 2. 跌势的第一波大跌，一下子就跌倒了2705.从7：50到8：10都在休息。其实是缓慢下跌。然后8：20加速下跌。跌势结束。开始升势。
 <br />
-3. 9：30开始升势。结果是个两段上涨走势，然后双顶。升势结束。
+3. 9：30开始升势。结果是个两段上涨走势，然后双顶。升势结束。但是这个升势要特别注意，它和前面的跌势的跌幅不成比例，所以
+它本身是无法反前面的跌势的。也就是说，它可以把小的走势从升势反成跌势，但是更大的走势仍然是升势。它的涨幅很小。
+所以无法撼动前面的跌势反转。
 <br />
 4. 9：40开始下跌，两段下跌。和前面形成双底。跌势结束。
 <br />
@@ -370,10 +420,21 @@ function contra(form) {
 </h3>
 
 <img src="head_shape_02.PNG" alt="test new" width="1000" height="600">
-<h3 style="color:MediumSeaGreen;">图示：7：00开始上涨，7：05大涨后，回调，这个是第一段。然后继续大涨。
+<h3 style="color:MediumSeaGreen;">图示：
+<br />
+1. 7：00开始上涨，7：05大涨后，回调，这个是第一段。然后继续大涨。
 到了7：20它冲高走平，这个就是第二段了。上涨结束，开始下跌。
+<br />
+2. 下跌的时候，7：30是第一段。它先是快速下跌，好像一个回调的样子，然后用冲高走平的方法反弹，然后再次下跌。
+再次下跌后，就是第二段下跌了。它虽然下跌幅度不大，但是回调的时间也够长。所以应该算第一段下跌。后面大跌后，
+就是第二段。一旦停止，就是反转了。
 </h3>
 
+<img src="lower_and_flat.PNG" alt="test" width="1000" height="600">
+<h3 style="color:MediumSeaGreen;">图示：这个走势和上一个相似。但是有本质的区别。7：30到达顶部后，它缓慢下跌，
+这个只能算头部的一部分。7：40一个大跌，但是其实跌幅不大，然后稍微反弹4分钟，继续大跌。这个算第一次下跌，而不是第二次。
+和上面不同。因为它的反弹时间很短。和后面的下跌比起来不成比例。
+</h3>
 
 <a name="in_falling"></a> 
 <h1 style="background-color:Red;"><em>大盘处在下跌期间 </em></h1>
