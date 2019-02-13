@@ -108,7 +108,7 @@ function contra(form) {
   result_3 = "不适用";
   
   if (sharp == "1") {      
-	  result = "前面出现激烈的下跌，如果是第二段走势，应该已经反转，应该割肉做多";
+	  result = "前面出现激烈的下跌，如果是第二段走势，应该已经反转，应该割肉做多，要注意第一段走势也要激烈的上涨，如果是缓慢上涨，那么就不是这个走势";
   } else {
       result = "没有激烈的行为，可能走势是暂时的";
   }
@@ -369,6 +369,11 @@ function big_mode(form) {
 <a name="two_stage_analysis"></a> 
 <h1 style="background-color:Red;"><em>两段走势的分析 </em></h1>
 <a href="#top_ref"><h2 style="color:Red;"><em>TOP</h2></em></a>
+0. 两段走势，一定要两段都是大幅上涨，或者两段都是大幅下跌才可以，如果任何一段是缓慢的运动的，那么就不是。
+两段走势，如果要反转，第二段一定要有反转的样子。比如顶部加速上涨后走平，如果没有这样的走势，也不会反转。
+<br />
+<br />
+
 1. 一个走势，总是分为两个阶段的。但是这两个阶段。时间长短不一定，幅度大小也不一定。
 第二个阶段是否一定结束也不一定，可能持续到收盘才爆发结束。所以一定要仔细分析。
 <br />
@@ -383,6 +388,8 @@ function big_mode(form) {
 
 <h3 style="color:Purple;">一个主要走势是跌势，如果下跌后，反弹的幅度到了和原来差不多。或者只低两个点的地方，而且停留很久，
 说明它的升势太大了。不能算是跌势的一部分。如果它反弹幅度明显很低，那么再次下跌就是两段走势的第二段。</h3>
+<h3 style="color:Purple;">两段走势的第二段或者第一段如果是缓慢运动走势，那么不能算两段走势，不会反转</h3>
+
 <img src="whole_day_two_stage_1.PNG" alt="test" width="1000" height="600">
 <h3 style="color:MediumSeaGreen;">图示：
 <br />
@@ -394,6 +401,9 @@ function big_mode(form) {
 8：40创新低，立刻回来，形成一个双底。这样就开始了升势。升势的第一阶段，快速大涨。9：00开始回调.9：15回调结束。开始第二阶段。
 然而这个第二阶段，非常的慢，中间经历了长时间震荡，回调关键点，不断拉回后创新高的样子，所以一直没有结束。直到收盘前，大涨。
 </h3>
+<img src="slow_rise_after_start.PNG" alt="test" width="1000" height="600">
+<h3 style="color:MediumSeaGreen;">图示：开盘出现缓慢上升走势，那么就不是第一段上涨。7：45开始大涨，不能把这个大涨看作是上涨的结束。
+其实它才刚刚开始上涨。</h3>
 
 <img src="whole_day_two_stage_3.PNG" alt="test" width="1000" height="600">
 <h3 style="color:MediumSeaGreen;">图示：
@@ -475,6 +485,7 @@ function big_mode(form) {
 <a href="#M_flat_during_rising"><h1 style="color:DodgerBlue;"><em>上升期间出现M形状的走平</em></h1></a>
 <a href="#retrace_and_rise"><h1 style="color:DodgerBlue;"><em>上升期间不断回调后冲高</em></h1></a>
 <a href="#rise_and_retrace"><h1 style="color:DodgerBlue;"><em>上升期间不断冲高后拉回</em></h1></a>
+<a href="#big_rise_and_pull_back"><h1 style="color:DodgerBlue;"><em>上升期间发生震荡或者走平期间，发生较大幅度冲高后，很快拉回</em></h1></a>
 <a href="#long_time_oscilate"><h1 style="color:DodgerBlue;"><em>上升期间发生长时间震荡</em></h1></a>
 <a href="#small_step_rise"><h1 style="color:DodgerBlue;"><em>上升期间发生小幅台阶的走势</em></h1></a>
 <a href="#retrace_and_break"><h1 style="color:DodgerBlue;"><em>上涨期间碰到阻力点，后退破位</em></h1></a>
@@ -726,6 +737,20 @@ function big_mode(form) {
 虽然它在高点走平，似乎是个下跌的样子。它的低点在震荡点以上。说明会继续涨。所以这个时候不要被它在高点走平所欺骗，以为这个会大跌。
 </h3>
 
+
+
+<a name="big_rise_and_pull_back"></a> 
+<h1 style="background-color:DodgerBlue;"><em>上升期间发生震荡或者走平期间，发生较大幅度冲高后，很快拉回 </em></h1>
+<a href="#top_ref"><h2 style="color:Red;"><em>TOP</h2></em></a>
+<h3 style="color:Purple;">大盘处于升势，然后震荡。它大幅上涨后，高点停留很短，就拉回到震荡点。这样未来一定会超过这个点的。应该立刻做多。
+甚至可以加倍做多。
+</h3>
+
+<img src="rise_big_and_retrace.PNG" alt="test" width="1000" height="600">
+<h3 style="color:MediumSeaGreen;">图示：前面大涨后，大盘处于升势，8：40大涨，在高点停留时间很短，就立刻下来。回到支撑点。
+可以想到。再升势下，这个一定会超过高点的。可以做多。甚至加倍做多。
+</h3>
+
 <a name="rise_and_retrace"></a> 
 <h1 style="background-color:DodgerBlue;"><em>上升期间不断冲高后拉回 </em></h1>
 <a href="#top_ref"><h2 style="color:Red;"><em>TOP</h2></em></a>
@@ -969,13 +994,18 @@ function big_mode(form) {
 </h3>
 
 <h3 style="color:Purple;">刚刚开盘后，出现冲高，走平，下跌后，反弹，没有结束下跌</h3>
-
 <img src="open_rise_drop.PNG" alt="test" width="1000" height="600">
 <h3 style="color:MediumSeaGreen;">图示：开盘6分钟，冲高，然后走平几分钟后，下跌，下跌时候出现加速，然后反弹。这也表面下跌没有结束。后面应该只做空
 不要做多，虽然它后面来回震荡，但是只能做空。不能做多，直到爆发为止。这时不能看到疑似的双底，就去做双底。虽然是刚刚开盘。但是这个下跌已经定了
 它开始是跌势。而且是没有完成的跌势。
 </h3>
 
+<h3 style="color:Purple;">刚刚开盘后，缓慢上涨，然后出现反复的新高，表面处于升势</h3>
+<img src="slow_rise_after_start.PNG" alt="test" width="1000" height="600">
+<h3 style="color:MediumSeaGreen;">图示：开盘后出现缓慢上涨，6：40走平，然后再次上涨，7：00回调后，再次上涨。说明处于升势。但是7：00出现稍微的加速上涨，
+然后大盘开始回调。要看到这个上涨并没有上涨后，走平再涨，而是上涨后，回调。说明大盘仍然处于升势。
+这次回调比较大。可以看到它跌倒前面的走平点后，反弹，然后大涨。只要认定是升势，那么就应该做多后，紧紧拿住。
+</h3>
 
 </body>
 </html>
