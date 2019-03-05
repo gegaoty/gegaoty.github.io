@@ -1,40 +1,5 @@
 <!DOCTYPE html>
 <html>
-<script>
-
-function retrace_60_percent(form) {
-
-var high = document.getElementById("highest").value;
-var low = document.getElementById("lowest").value;
-
-var D;
-var entry;
-var dis = parseFloat(high) - parseFloat(low);
-    D = dis * 0.618;
-    entry = parseFloat(high) - D;
-
-    document.getElementById("entry_point").innerHTML = "在这个点数买入： " + entry;
-
-return 0;
-}
-
-function rebound_60_percent(form) {
-
-var high = document.getElementById("short_high").value;
-var low = document.getElementById("short_low").value;
-
-var D;
-var entry;
-var dis = parseFloat(high) - parseFloat(low);
-    D = dis * 0.618;
-    entry = parseFloat(low) + D;
-
-    document.getElementById("short_entry").innerHTML = "在这个点数做空： " + entry;
-
-return 0;
-}
-
-</script>
 <iframe src="https://sslecal2.forexprostools.com?columns=exc_flags,exc_importance&features=datepicker,timezone&countries=5&calType=day&timeZone=8&lang=1" width="650" height="467" frameborder="0" allowtransparency="true" marginwidth="0" marginheight="0"></iframe><div class="poweredBy" style="font-family: Arial, Helvetica, sans-serif;"><span style="font-size: 11px;color: #333333;text-decoration: none;">Real Time Economic Calendar provided by <a href="https://www.investing.com/" rel="nofollow" target="_blank" style="font-size: 11px;color: #06529D; font-weight: bold;" class="underline_link">Investing.com</a>.</span></div>
 <body>
 
@@ -43,36 +8,17 @@ return 0;
 
 <iframe src="https://www.widgets.investing.com/live-indices?theme=darkTheme&cols=last,high,low,change,changePerc,time&pairs=166" width="100%" height="100%" frameborder="0" allowtransparency="true" marginwidth="0" marginheight="0"></iframe><div class="poweredBy" style="font-family: Arial, Helvetica, sans-serif;">Powered by <a href="https://www.investing.com?utm_source=WMT&amp;utm_medium=referral&amp;utm_campaign=LIVE_INDICES&amp;utm_content=Footer%20Link" target="_blank" rel="nofollow">Investing.com</a></div><br />
 <br />
-
-<a href="action_page.html"><h1 style="color:Purple;"><em>计算机辅助交易</em></h1></a>
+<a name="top_ref"></a>
+<h1 style="color:Red;"><em>股市的运动在每个级别上都是逆着人的直觉而运动</em></h1>
+<a href="pycho_theory.html" target="_blank"><h1 style="color:Purple;"><em>心理理论</em></h1></a>
+<a href="two_stage.html" target="_blank"><h1 style="color:Purple;"><em>两段走势理论</em></h1></a>
+<a href="strengh_accum.html" target="_blank"><h1 style="color:Purple;"><em>力量积累理论</em></h1></a>
+<a href="vaccum.html" target="_blank"><h1 style="color:Purple;"><em>真空填补理论</em></h1></a>
+<a href="relativity.html" target="_blank"><h1 style="color:Purple;"><em>相对力量理论</em></h1></a>
+=============================================================================================================
+<a href="action_page.html" target="_blank"><h1 style="color:Purple;"><em>具体的走势讨论</em></h1></a>
+<a href="just_opening.html" target="_blank"><h1 style="color:Purple;"><em>刚刚开盘后的走势</em></h1></a>
 <br />
-=====================================================================================
-<h1 style="color:Tomato;">上升时候斐波那契回调点数</h1>
-
-最低点: <input type="text" id="lowest"  size="8" value="2652"/>
-最高点: <input type="text" id="highest"  size="8" value="2664"/>
-
-<br />
-<input type="button" value="计算做多点" onClick="retrace_60_percent(this)">
-
-<h1 style="color:Violet;"> <p id="entry_point" name="r1"> </h1>
-<br />
-</p>
-=====================================================================================
-<h1 style="color:Tomato;">下跌时候斐波那契反弹点数，这个可能用处不大</h1>
-
-最高点: <input type="text" id="short_high"  size="8" value="2764"/>
-最低点: <input type="text" id="short_low"  size="8" value="2752"/>
-
-<br />
-<input type="button" value="计算做空点" onClick="rebound_60_percent(this)">
-
-<h1 style="color:Violet;"> <p id="short_entry" name="r1"> </h1>
-<br />
-</p>
-
-<a name="top_ref"></a> 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 <h1 style="color:Purple;"><em>交易规则</em></h1>
 
 <h2 style="color:Red;"><em>
@@ -646,6 +592,7 @@ D。自己克服了一个陷阱后，得意忘形，看到价格更好了。就�
 幅度可能会有很大变化。</em></h2>
 <h2 style="color:Red;"><em> 8. 寻找上涨后，立刻拉回，或是稍微走平一段拉回；下跌时，低点立刻拉回的走势</em></h2>
 <h2 style="color:Green;"><em> 9. 寻找真空</em></h2>
+<h2 style="color:Green;"><em> 10. 寻找力量的积累</em></h2>
 
 
 <a name="name_of_all_modes"></a> 
@@ -888,7 +835,6 @@ D。自己克服了一个陷阱后，得意忘形，看到价格更好了。就�
 
 <a href="#slow_rise_at_bottom_for_1hour"><h1 style="color:Red;"><em>在底部缓慢上涨或者震荡，超过一个小时,形成升势</em></h1></a>
 <a href="#first_wave_with_accel"><h1 style="color:Red;"><em>第一波上涨出现加速走势</em></h1></a>
-<a href="#down_pulse_and_bottom_out"><h1 style="color:Red;"><em>在底部出现下影线，形成底部后大涨。</em></h1></a>
 <a href="#slow_strenthen_mode"><h1 style="color:Red;"><em>从低处逐渐增强的上涨</em></h1></a>
 <a href="#fast_drop_in_rising_mode"><h1 style="color:Red;"><em>升势中，两种下跌方式</em></h1></a>
 <a href="#big_drop_in_rising_mode"><h1 style="color:Red;"><em>升势中，出现大跌甚至反转下跌的走势</em></h1></a>
@@ -3720,19 +3666,6 @@ c. 如果冲高后，创新高后，立刻从高点下来，连续2分钟，然�
 走平2，3分钟。然后继续下跌。这样让做空的人难受，而让做多的人抱有希望。以为会继续上涨。
 </h3>
 
-<a name="down_pulse_and_bottom_out"></a> 
-<h1 style="background-color:DodgerBlue;"><em>在底部出现下影线，形成底部后大涨</em></h1>
-1. 在底部的时候，出现也给下跌后，立刻拉回。这个表示是要涨。那个拉回只有几秒钟。看起来是为那些止损的人准备的。
-这样这些人一抛售，就到达了底部。
-<br />
-<br />
-     <img src="long_time_passing_and_pass_again.PNG" alt=" small oscilate_trap" width="1000" height="700">
-<br />
-<h3 style="color:MediumSeaGreen;">图示：1：40出现了底部。它一下走低到了2702.然后立刻收回。在2705的地方停下来。
-这个时候应该立刻做多。如果考虑它已经是两次跨越后的加速走势。
-
-
-
 <a name="first_wave_with_accel"></a> 
 <h1 style="background-color:DodgerBlue;"><em>第一波上涨形成加速走势 </em></h1>
 1. 第一波上涨形成加速，但是不代表走势结束。它一般会大幅回调，然后再次上涨。
@@ -3998,13 +3931,6 @@ c. 如果冲高后，创新高后，立刻从高点下来，连续2分钟，然�
 <img src="open_flat_drop.PNG" alt="oscilate_trap" width="1000" height="700">
 <h3 style="color:MediumSeaGreen;">图示：刚刚开盘，10：40，12：40都出现了走平，下跌，尖锐反弹的走势。
 这个可以充分利用。
-</h3>
-
-<img src="long_time_passing_and_pass_again.PNG" alt="oscilate_trap" width="1000" height="700">
-<h3 style="color:MediumSeaGreen;">图示：刚刚开盘后，速度很大的下跌，反弹会到高点，然后震荡3分钟。
-震荡期间还创新高，立刻被拉回。让人心存犹豫。结果大跌。2：30反弹回到高点附近。稍微低一些。这个似乎是
-这个走势。但是从几方面分析不是。一方面这个处于逐步增强走势当中。逐步增强走势一定要一个爆发。这个没有
-。所以后面继续爆发。
 </h3>
 
 <img src="open_huge_lower_and_drop.PNG" alt="oscilate_trap" width="1000" height="700">
