@@ -3,6 +3,7 @@ charts/abnormal_accel_02.PNG
 charts/abnormal_drop_mode.PNG
 charts/abnormal_two_stage_02.PNG
 charts/accumu_mode.PNG
+charts/big_retrace_01.PNG
 charts/bottom_with_slow_rise.PNG
 charts/build_trend_at_open.PNG
 charts/complete_turn_around.PNG
@@ -35,17 +36,21 @@ charts/first_wave_check.PNG
 charts/flat_drop_mode_01.PNG
 charts/flat_drop_mode_02.PNG
 charts/flat_new_low_01.PNG
+charts/flat_reverse.PNG
 charts/head_shape_01.PNG
 charts/just_enough_02.PNG
 charts/long_time_oscilate_combine_01.PNG
+charts/main_down_trend.PNG
 charts/main_rise_mode.PNG
 charts/non_reverse.PNG
 charts/non_reverting_mode.PNG
 charts/open_combine_rise.PNG
+charts/open_down_with_no_bot.PNG
 charts/open_drop_01.PNG
 charts/open_rise_and_flat.PNG
 charts/open_rise_and_retrace.PNG
 charts/open_rise_flat_and_rise.PNG
+charts/open_with_1st_wave_down.PNG
 charts/open_with_3_stage_down.PNG
 charts/open_with_big_down_bar.PNG
 charts/open_with_down_01.PNG
@@ -58,6 +63,7 @@ charts/open_with_two_stage_retrace.PNG
 charts/open_with_up_trend_01.PNG
 charts/partial_reverse.PNG
 charts/partial_reverse_01.PNG
+charts/partial_reverse_02.PNG
 charts/partial_reverse_both_sides.PNG
 charts/pass_key_very_slow.PNG
 charts/passing_flat_when_rebound.PNG
@@ -73,6 +79,7 @@ charts/retrace_pos_01.PNG
 charts/reverse_mode_01.PNG
 charts/reverse_need_better_position_01.PNG
 charts/reverse_of_rising_mode.PNG
+charts/reverse_quick.PNG
 charts/rise_and_fall_open.PNG
 charts/rise_fast.PNG
 charts/rise_high_with_no_retrace.PNG
