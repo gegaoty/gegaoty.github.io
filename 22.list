@@ -25,6 +25,7 @@ charts/fast_drop_during_rise.PNG
 charts/fast_drop_follow_fast_rise.PNG
 charts/fast_drop_from_high.PNG
 charts/fast_drop_then_slow_drop.PNG
+charts/fast_mode.PNG
 charts/fast_retrace.PNG
 charts/fast_rise_topping.PNG
 charts/fed_caused_abnormal_two_stage.PNG
@@ -52,6 +53,7 @@ charts/open_rise_and_retrace.PNG
 charts/open_rise_flat_and_rise.PNG
 charts/open_with_1st_wave_down.PNG
 charts/open_with_3_stage_down.PNG
+charts/open_with_big_1st_wave.PNG
 charts/open_with_big_down_bar.PNG
 charts/open_with_down_01.PNG
 charts/open_with_downtrend.PNG
@@ -61,6 +63,8 @@ charts/open_with_rise_trend_02.PNG
 charts/open_with_rising_trend.PNG
 charts/open_with_two_stage_retrace.PNG
 charts/open_with_up_trend_01.PNG
+charts/partial_rebound.PNG
+charts/partial_rebound_02.PNG
 charts/partial_reverse.PNG
 charts/partial_reverse_01.PNG
 charts/partial_reverse_02.PNG
@@ -99,10 +103,13 @@ charts/t_stage_02.PNG
 charts/t_stage_03.PNG
 charts/total_reverse.PNG
 charts/two_reversal.PNG
+charts/two_stage_down.PNG
 charts/two_stage_drop_2.PNG
 charts/two_stage_rise_01.PNG
 charts/two_stage_rise_with_no_revserse.PNG
+charts/two_stage_up.PNG
 charts/two_stage_with_top_accel.PNG
 charts/two_strage_drop_in_big_scale.PNG
+charts/two_weak_2_stage_drop.PNG
 charts/valuable_charts_01.PNG
 charts/weak_two_stage_rise.PNG
