@@ -3,6 +3,7 @@ charts/abnormal_accel_02.PNG
 charts/abnormal_drop_mode.PNG
 charts/abnormal_two_stage_02.PNG
 charts/accumu_mode.PNG
+charts/after_market_3_stage_down.PNG
 charts/big_retrace_01.PNG
 charts/bottom_with_slow_rise.PNG
 charts/build_trend_at_open.PNG
@@ -15,6 +16,7 @@ charts/demo_relative_01.PNG
 charts/demo_relative_02.PNG
 charts/direction_change_01.PNG
 charts/double_top_bot_fast_mov.PNG
+charts/driven_by_pre_mkt.PNG
 charts/drop_with_big_bar_but_slow_lower.PNG
 charts/failed_rise_open.PNG
 charts/fake_horizontal_5_wave.PNG
@@ -33,6 +35,7 @@ charts/fill_gap_at_open.PNG
 charts/fill_gap_at_open_02.PNG
 charts/fill_vac_after_5_wave.PNG
 charts/find_1st_wave.PNG
+charts/finish_5_wave_after_open.PNG
 charts/first_wave_check.PNG
 charts/flat_drop_mode_01.PNG
 charts/flat_drop_mode_02.PNG
@@ -40,6 +43,8 @@ charts/flat_new_low_01.PNG
 charts/flat_reverse.PNG
 charts/head_shape_01.PNG
 charts/just_enough_02.PNG
+charts/lenght_of_1st_wave_01.PNG
+charts/lenght_of_1st_wave_02.PNG
 charts/long_time_oscilate_combine_01.PNG
 charts/main_down_trend.PNG
 charts/main_rise_mode.PNG
@@ -76,9 +81,16 @@ charts/partial_reverse_both_sides.PNG
 charts/pass_key_very_slow.PNG
 charts/passing_flat_when_rebound.PNG
 charts/passing_mode_as_top.PNG
+charts/passing_not_reverse.PNG
+charts/pre_market_down.PNG
+charts/pre_market_down_01.PNG
 charts/pre_market_rise.PNG
+charts/pre_mkt_big_1st_wave_drop.PNG
+charts/pre_mkt_strong_1st.PNG
+charts/pre_mkt_two_stage_up.PNG
 charts/quick_drop_at_start.PNG
 charts/rebound_in_bear_mkt.PNG
+charts/rebound_lower.PNG
 charts/relative_drop.PNG
 charts/relative_move_01.PNG
 charts/relative_rebound.PNG
@@ -106,11 +118,13 @@ charts/slow_go_lower.PNG
 charts/slow_new_high.PNG
 charts/slow_rise_after_open.PNG
 charts/stay_around_key_point.PNG
+charts/strong_1st_down_wave.PNG
 charts/strong_1st_wave.PNG
 charts/t_stage_01.PNG
 charts/t_stage_02.PNG
 charts/t_stage_03.PNG
 charts/total_reverse.PNG
+charts/two_aceel_reverse.PNG
 charts/two_reversal.PNG
 charts/two_stage_down.PNG
 charts/two_stage_drop_2.PNG
