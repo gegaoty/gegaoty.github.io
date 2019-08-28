@@ -37,6 +37,7 @@ charts/fed_caused_abnormal_two_stage.PNG
 charts/fill_gap_at_open.PNG
 charts/fill_gap_at_open_02.PNG
 charts/fill_gap_at_open_03.PNG
+charts/fill_gap_not_double_top.PNG
 charts/fill_vac_after_5_wave.PNG
 charts/find_1st_wave.PNG
 charts/finish_5_wave_after_open.PNG
@@ -66,6 +67,7 @@ charts/open_rise_and_retrace.PNG
 charts/open_rise_flat_and_rise.PNG
 charts/open_rise_with_two_stage_down.PNG
 charts/open_up_with_2_stage_down.PNG
+charts/open_with_1st_wave_big.PNG
 charts/open_with_1st_wave_down.PNG
 charts/open_with_2stage_down.PNG
 charts/open_with_3_stage_down.PNG
@@ -86,6 +88,7 @@ charts/oscilate_within.PNG
 charts/partial_and_full_reverse.PNG
 charts/partial_rebound.PNG
 charts/partial_rebound_02.PNG
+charts/partial_rebound_pos.PNG
 charts/partial_reverse.PNG
 charts/partial_reverse_01.PNG
 charts/partial_reverse_02.PNG
@@ -98,6 +101,7 @@ charts/pre_market_1st_down_wave.PNG
 charts/pre_market_down.PNG
 charts/pre_market_down_01.PNG
 charts/pre_market_rise.PNG
+charts/pre_mkt_accum.PNG
 charts/pre_mkt_big_1st_wave_drop.PNG
 charts/pre_mkt_strong_1st.PNG
 charts/pre_mkt_two_stage_drop.PNG
