@@ -23,6 +23,7 @@ charts/drop_in_pre_mkt.PNG
 charts/drop_with_big_bar_but_slow_lower.PNG
 charts/failed_rise_open.PNG
 charts/fake_horizontal_5_wave.PNG
+charts/fake_stage_rise.PNG
 charts/falling_acce_pre_mkt.PNG
 charts/fast_drop_as_1st_wave.PNG
 charts/fast_drop_become_partial.PNG
@@ -40,11 +41,14 @@ charts/fill_gap_at_open.PNG
 charts/fill_gap_at_open_02.PNG
 charts/fill_gap_at_open_03.PNG
 charts/fill_gap_not_double_top.PNG
+charts/fill_gap_with_weak_2_stage.PNG
 charts/fill_vac_after_5_wave.PNG
 charts/find_1st_wave.PNG
 charts/finish_5_wave_after_open.PNG
 charts/first_wave_check.PNG
+charts/first_wave_one_accel.PNG
 charts/first_wave_pre_mkt.PNG
+charts/first_wave_strong.PNG
 charts/flat_drop_mode_01.PNG
 charts/flat_drop_mode_02.PNG
 charts/flat_new_low_01.PNG
@@ -118,6 +122,7 @@ charts/pre_mkt_two_stage_drop.PNG
 charts/pre_mkt_two_stage_up.PNG
 charts/quick_drop_at_start.PNG
 charts/quick_drop_pre_mkt.PNG
+charts/real_bottom_up.PNG
 charts/rebound_in_bear_mkt.PNG
 charts/rebound_lower.PNG
 charts/relative_drop.PNG
@@ -126,6 +131,7 @@ charts/relative_rebound.PNG
 charts/relative_up_mode.PNG
 charts/reply_of_pre_mkt.PNG
 charts/reply_of_pre_mkt_01.PNG
+charts/retrace_and_accel_to_rise.PNG
 charts/retrace_pos_01.PNG
 charts/reverse_accum_01.PNG
 charts/reverse_accum_02.PNG
@@ -153,6 +159,7 @@ charts/slow_drop_at_begin.PNG
 charts/slow_go_lower.PNG
 charts/slow_new_high.PNG
 charts/slow_rise_after_open.PNG
+charts/stable_rise.PNG
 charts/stay_around_key_point.PNG
 charts/strong_1st_down_wave.PNG
 charts/strong_1st_wave.PNG
