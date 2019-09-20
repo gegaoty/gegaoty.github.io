@@ -33,9 +33,11 @@ charts/fast_drop_follow_fast_rise.PNG
 charts/fast_drop_from_high.PNG
 charts/fast_drop_then_slow_drop.PNG
 charts/fast_mode.PNG
+charts/fast_new_high_retrace.PNG
 charts/fast_pull_back_partial_reversal.PNG
 charts/fast_retrace.PNG
 charts/fast_rise_topping.PNG
+charts/fast_rise_with_fast_pull_mode.PNG
 charts/fed_caused_abnormal_two_stage.PNG
 charts/fill_gap_at_open.PNG
 charts/fill_gap_at_open_02.PNG
@@ -63,6 +65,7 @@ charts/main_down_trend.PNG
 charts/main_rise_mode.PNG
 charts/non_reverse.PNG
 charts/non_reverting_mode.PNG
+charts/one_accel_with_strong_1st_wave.PNG
 charts/open_combine_rise.PNG
 charts/open_down_last_leg.PNG
 charts/open_down_with_no_bot.PNG
@@ -104,6 +107,7 @@ charts/partial_reverse.PNG
 charts/partial_reverse_01.PNG
 charts/partial_reverse_02.PNG
 charts/partial_reverse_both_sides.PNG
+charts/pass_flat_to_accel.PNG
 charts/pass_key_very_slow.PNG
 charts/passing_flat_when_rebound.PNG
 charts/passing_mode_as_top.PNG
@@ -119,6 +123,7 @@ charts/pre_mkt_big_1st_wave_drop.PNG
 charts/pre_mkt_rise_trend.PNG
 charts/pre_mkt_rise_trend_01.PNG
 charts/pre_mkt_strong_1st.PNG
+charts/pre_mkt_support.PNG
 charts/pre_mkt_two_stage_drop.PNG
 charts/pre_mkt_two_stage_up.PNG
 charts/quick_drop_at_start.PNG
@@ -185,5 +190,6 @@ charts/two_stage_with_top_accel.PNG
 charts/two_strage_drop_in_big_scale.PNG
 charts/two_weak_2_stage_drop.PNG
 charts/undecided_pre_mkt.PNG
+charts/upper_shadow_usage.PNG
 charts/valuable_charts_01.PNG
 charts/weak_two_stage_rise.PNG
