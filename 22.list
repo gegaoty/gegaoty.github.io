@@ -10,6 +10,7 @@ charts/big_down_pre_mkt.PNG
 charts/big_drop_from_high.PNG
 charts/big_retrace_01.PNG
 charts/bottom_with_slow_rise.PNG
+charts/break_tgt_price.PNG
 charts/build_trend_at_open.PNG
 charts/complete_turn_around.PNG
 charts/conti_drop_as_bot_01.PNG
@@ -54,10 +55,13 @@ charts/fill_vac_after_5_wave.PNG
 charts/find_1st_wave.PNG
 charts/finish_5_wave_after_open.PNG
 charts/first_big_wave_with_one_accel_flat_surface.PNG
+charts/first_tick_pre_mkt.PNG
+charts/first_ticker_meaningless.PNG
 charts/first_wave_check.PNG
 charts/first_wave_one_accel.PNG
 charts/first_wave_pre_mkt.PNG
 charts/first_wave_strong.PNG
+charts/first_wave_within_range.PNG
 charts/flat_down_and_rise_and_down.PNG
 charts/flat_drop_mode_01.PNG
 charts/flat_drop_mode_02.PNG
@@ -75,6 +79,7 @@ charts/major_trend_down.PNG
 charts/new_low_in_pre_mkt.PNG
 charts/non_reverse.PNG
 charts/non_reverting_mode.PNG
+charts/not_strong_first_wave.PNG
 charts/one_accel_with_strong_1st_wave.PNG
 charts/open_combine_rise.PNG
 charts/open_down_last_leg.PNG
@@ -141,6 +146,7 @@ charts/pre_mkt_strong_1st.PNG
 charts/pre_mkt_support.PNG
 charts/pre_mkt_two_stage_drop.PNG
 charts/pre_mkt_two_stage_up.PNG
+charts/pull_back_and_rise_pass.PNG
 charts/quick_drop_at_start.PNG
 charts/quick_drop_pre_mkt.PNG
 charts/real_bottom_up.PNG
@@ -208,6 +214,8 @@ charts/two_aceel_reverse.PNG
 charts/two_aceel_reverse_02.PNG
 charts/two_day_5_wave_drop.PNG
 charts/two_reversal.PNG
+charts/two_stage_after_mkt_reverse.PNG
+charts/two_stage_at_night.PNG
 charts/two_stage_down.PNG
 charts/two_stage_down_pre_mkt.PNG
 charts/two_stage_drop_2.PNG
