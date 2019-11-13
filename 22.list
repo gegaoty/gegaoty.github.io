@@ -19,6 +19,7 @@ charts/complete_turn_around.PNG
 charts/conti_drop_as_bot_01.PNG
 charts/conti_drop_rise.PNG
 charts/continu_drop_bot_01.PNG
+charts/continue_after_mkt.PNG
 charts/continue_drop_but_reverse_soon.PNG
 charts/demo_relative_01.PNG
 charts/demo_relative_02.PNG
@@ -129,12 +130,12 @@ charts/oscilate_long_after_new_high.PNG
 charts/oscilate_within.PNG
 charts/partial_accel_in_down_trend.PNG
 charts/partial_and_full_reverse.PNG
-charts/partial_rebound.PNG
 charts/partial_rebound_02.PNG
 charts/partial_rebound_pos.PNG
 charts/partial_reverse.PNG
 charts/partial_reverse_01.PNG
 charts/partial_reverse_02.PNG
+charts/partial_reverse_03.PNG
 charts/partial_reverse_both_sides.PNG
 charts/pass_flat_to_accel.PNG
 charts/pass_key_very_slow.PNG
@@ -162,7 +163,6 @@ charts/pre_mkt_two_stage_drop.PNG
 charts/pre_mkt_two_stage_up.PNG
 charts/pull_back_and_rise_pass.PNG
 charts/pull_back_rise.PNG
-charts/quick_drop_at_start.PNG
 charts/quick_drop_pre_mkt.PNG
 charts/real_bottom_up.PNG
 charts/real_top_drop.PNG
@@ -185,7 +185,9 @@ charts/reverse_accum_02.PNG
 charts/reverse_accum_11.PNG
 charts/reverse_accum_12.PNG
 charts/reverse_after_2_stage.PNG
+charts/reverse_earlier_already.PNG
 charts/reverse_early.PNG
+charts/reverse_finish.PNG
 charts/reverse_mode_01.PNG
 charts/reverse_need_better_position_01.PNG
 charts/reverse_of_rising_mode.PNG
@@ -193,8 +195,10 @@ charts/reverse_quick.PNG
 charts/reverse_trend.PNG
 charts/reverse_trend_01.PNG
 charts/reverse_two_accel.PNG
+charts/reverse_within_range.PNG
 charts/reversesal_in_middle.PNG
 charts/revserse_the_pre_mkt_wave.PNG
+charts/rise_and_fall_mode.PNG
 charts/rise_and_fall_open.PNG
 charts/rise_and_falling_trend.PNG
 charts/rise_crossing.PNG
@@ -213,8 +217,8 @@ charts/second_top_slow.PNG
 charts/second_wave_down.PNG
 charts/shape_of_bot.PNG
 charts/sharp_down_gap.PNG
+charts/single_line_reverse.PNG
 charts/slow_down_with_new_high.PNG
-charts/slow_drop_at_begin.PNG
 charts/slow_go_lower.PNG
 charts/slow_new_high.PNG
 charts/slow_rise_after_open.PNG
