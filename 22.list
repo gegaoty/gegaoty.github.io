@@ -149,7 +149,9 @@ charts/partial_reverse_both_sides.PNG
 charts/pass_flat_to_accel.PNG
 charts/pass_key_very_slow.PNG
 charts/pass_through_after_mkt.PNG
+charts/pass_through_fail.PNG
 charts/pass_through_mode_rising_trend.PNG
+charts/pass_through_not_work.PNG
 charts/passing_flat_when_rebound.PNG
 charts/passing_mode_as_top.PNG
 charts/passing_not_reverse.PNG
