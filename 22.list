@@ -16,7 +16,9 @@ charts/bottom_with_slow_rise.PNG
 charts/break_tgt_price.PNG
 charts/build_trend_at_open.PNG
 charts/complete_turn_around.PNG
+charts/complex_drop_01.PNG
 charts/complex_mode_drop.PNG
+charts/complex_rise_01.PNG
 charts/conti_drop_as_bot_01.PNG
 charts/conti_drop_rise.PNG
 charts/continu_drop_bot_01.PNG
@@ -69,6 +71,8 @@ charts/finish_mode.PNG
 charts/first_big_wave_with_one_accel_flat_surface.PNG
 charts/first_tick_pre_mkt.PNG
 charts/first_ticker_meaningless.PNG
+charts/first_wave_after_range.PNG
+charts/first_wave_after_rela_weak.PNG
 charts/first_wave_check.PNG
 charts/first_wave_diff_from_pre_mkt.PNG
 charts/first_wave_down.PNG
@@ -190,6 +194,7 @@ charts/relative_drop.PNG
 charts/relative_move_01.PNG
 charts/relative_rebound.PNG
 charts/relative_up_mode.PNG
+charts/relative_weak.PNG
 charts/relative_weak_fill_vac.PNG
 charts/reply_of_pre_mkt.PNG
 charts/reply_of_pre_mkt_01.PNG
@@ -204,11 +209,15 @@ charts/reverse_earlier_already.PNG
 charts/reverse_early.PNG
 charts/reverse_finish.PNG
 charts/reverse_mode_01.PNG
+charts/reverse_mode_trigger.PNG
 charts/reverse_need_better_position_01.PNG
 charts/reverse_of_rising_mode.PNG
 charts/reverse_quick.PNG
 charts/reverse_trend.PNG
 charts/reverse_trend_01.PNG
+charts/reverse_trigger.PNG
+charts/reverse_trigger_02.PNG
+charts/reverse_trigger_03.PNG
 charts/reverse_two_accel.PNG
 charts/reverse_within_range.PNG
 charts/reversesal_in_middle.PNG
@@ -231,11 +240,13 @@ charts/second_stage_too_big_02.PNG
 charts/second_top_slow.PNG
 charts/second_wave_down.PNG
 charts/shape_of_bot.PNG
+charts/sharp_corner_flat_02.PNG
 charts/sharp_down_gap.PNG
 charts/single_line_reverse.PNG
 charts/slow_down_with_new_high.PNG
 charts/slow_go_lower.PNG
 charts/slow_new_high.PNG
+charts/slow_new_peak_and_flat.PNG
 charts/slow_rise_after_open.PNG
 charts/slow_start_with_fast_start.PNG
 charts/small_two_stage_after_boundary.PNG
@@ -272,5 +283,4 @@ charts/two_stage_with_top_accel.PNG
 charts/two_strage_drop_in_big_scale.PNG
 charts/undecided_pre_mkt.PNG
 charts/upper_shadow_usage.PNG
-charts/valuable_charts_01.PNG
 charts/whole_day_at_bottom.PNG
