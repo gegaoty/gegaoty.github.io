@@ -2,10 +2,16 @@
 <html>
 <head>
 <script>
-const password = prompt("Enter password:");
+const CORRECT_PASSWORD = "1197Borregas";
 
-if (password !== "1197Borregas") {
-	window.location.href = "about:blank";
+if (localStorage.getItem("authenticated") !== "yes") {
+    const p = prompt("Enter password:");
+
+    if (p === CORRECT_PASSWORD) {
+        localStorage.setItem("authenticated", "yes");
+    } else {
+		window.location.replace("about:blank");
+	}
 }
 </script>
 </head>
